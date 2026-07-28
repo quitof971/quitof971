@@ -4,14 +4,14 @@ import { site } from "@/content/site";
 import { Logo } from "@/components/ui/Logo";
 import { Container } from "@/components/ui/Container";
 
-export function Footer() {
+export function Footer({ logoOnDark }: { logoOnDark?: string | null }) {
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-white/10 bg-black text-white">
       <Container className="grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4 lg:py-20">
         <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
-          <Logo tone="light" />
+          <Logo tone="light" imgSrc={logoOnDark} />
           <p className="text-sm leading-relaxed text-white/60">
             Acquisition digitale, suivi commercial et automatisation pour les entreprises du
             bâtiment. {site.contact.area}.

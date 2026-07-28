@@ -6,8 +6,15 @@ import Link from "next/link";
 import { Phone, X } from "lucide-react";
 import { site } from "@/content/site";
 import { Button } from "@/components/ui/Button";
+import { Logo } from "@/components/ui/Logo";
 
-export function MobileNav({ onClose }: { onClose: () => void }) {
+export function MobileNav({
+  onClose,
+  logoSrc,
+}: {
+  onClose: () => void;
+  logoSrc?: string | null;
+}) {
   const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -31,7 +38,7 @@ export function MobileNav({ onClose }: { onClose: () => void }) {
       className="fixed inset-0 z-[110] flex flex-col bg-black text-white sm:hidden"
     >
       <div className="flex items-center justify-between px-5 py-4">
-        <span className="font-heading text-lg font-bold">BTP Leads Pro</span>
+        <Logo tone="light" imgSrc={logoSrc} />
         <button
           ref={closeRef}
           type="button"

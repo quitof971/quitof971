@@ -2,11 +2,12 @@ import { Check } from "lucide-react";
 import { Offer } from "@/content/offers";
 import { Button } from "./Button";
 import { Badge } from "./Badge";
+import { TiltCard } from "./TiltCard";
 
 export function PricingCard({ offer, featured = false }: { offer: Offer; featured?: boolean }) {
   return (
-    <div
-      className={`relative flex h-full flex-col gap-6 rounded-2xl border p-6 sm:p-8 ${
+    <TiltCard
+      className={`relative flex flex-col gap-6 rounded-2xl border p-6 sm:p-8 ${
         featured
           ? "border-orange bg-dark text-white shadow-[0_24px_60px_-24px_rgba(252,76,1,0.45)]"
           : "border-border bg-white text-black"
@@ -55,6 +56,6 @@ export function PricingCard({ offer, featured = false }: { offer: Offer; feature
       <Button href={offer.href} variant="primary" className="w-full">
         {offer.cta}
       </Button>
-    </div>
+    </TiltCard>
   );
 }

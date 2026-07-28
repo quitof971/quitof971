@@ -8,7 +8,13 @@ import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
 import { MobileNav } from "./MobileNav";
 
-export function Header() {
+export function Header({
+  logoOnDark,
+  logoOnLight,
+}: {
+  logoOnDark?: string | null;
+  logoOnLight?: string | null;
+}) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -27,9 +33,12 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex w-full max-w-[1240px] items-center justify-between gap-4 px-5 py-4 sm:px-8">
+      <div className="mx-auto flex h-20 w-full max-w-[1240px] items-center justify-between gap-4 px-5 sm:px-8">
         <Link href="/" aria-label="BTP Leads Pro — Accueil" className="shrink-0">
-          <Logo tone={scrolled ? "dark" : "light"} />
+          <Logo
+            tone={scrolled ? "dark" : "light"}
+            imgSrc={scrolled ? logoOnLight : logoOnDark}
+          />
         </Link>
 
         <nav aria-label="Navigation principale" className="hidden items-center gap-7 lg:flex">
@@ -74,7 +83,7 @@ export function Header() {
         </div>
       </div>
 
-      {menuOpen ? <MobileNav onClose={() => setMenuOpen(false)} /> : null}
+      {menuOpen ? <MobileNav onClose={() => setMenuOpen(false)} logoSrc={logoOnDark} /> : null}
     </header>
   );
 }

@@ -15,7 +15,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_15%_10%,rgba(252,76,1,0.16),transparent),radial-gradient(50%_45%_at_90%_20%,rgba(4,165,239,0.14),transparent)]"
       />
 
-      <Container className="relative grid grid-cols-1 items-center gap-12 py-20 sm:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:py-32">
+      <Container className="relative grid grid-cols-1 items-center gap-12 pb-20 pt-36 sm:pb-24 sm:pt-40 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:pb-32 lg:pt-48">
         <div className="flex flex-col gap-7">
           <motion.span
             initial={{ opacity: 0, y: 16 }}
@@ -43,9 +43,8 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="max-w-xl text-base leading-relaxed text-white/70 sm:text-lg"
           >
-            BTP Leads Pro conçoit et pilote des systèmes d&apos;acquisition pour les entreprises
-            du bâtiment : campagnes Google Ads, pages de destination, suivi des appels, CRM,
-            relances et optimisation.
+            Google Ads, pages de destination, suivi des appels, CRM et relances : un système
+            complet, piloté pour vous, pour transformer vos clics en clients.
           </motion.p>
 
           <motion.div
@@ -76,8 +75,37 @@ export function Hero() {
           className="relative mx-auto aspect-square w-full max-w-[480px]"
         >
           <HeroGraphic />
+
+          <FloatingChip label="Google Ads" className="left-[2%] top-[8%]" delay={0} />
+          <FloatingChip label="CRM & relances" className="right-[0%] top-[42%]" delay={0.8} />
+          <FloatingChip label="Tracking appels" className="bottom-[6%] left-[10%]" delay={1.5} />
         </motion.div>
       </Container>
     </section>
+  );
+}
+
+function FloatingChip({
+  label,
+  className,
+  delay,
+}: {
+  label: string;
+  className: string;
+  delay: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: [10, 0, -10, 0] }}
+      transition={{
+        opacity: { duration: 0.5, delay: 1 + delay },
+        y: { duration: 4.5, delay: 1 + delay, repeat: Infinity, ease: "easeInOut" },
+      }}
+      className={`absolute hidden items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3.5 py-2 text-xs font-semibold text-white/85 backdrop-blur-sm sm:flex ${className}`}
+    >
+      <span className="h-1.5 w-1.5 rounded-full bg-orange" aria-hidden="true" />
+      {label}
+    </motion.div>
   );
 }
