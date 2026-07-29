@@ -11,9 +11,37 @@ import {
   type ContactFormValues,
 } from "@/lib/validation";
 
+function readDefaultServiceFromUrl(): string | undefined {
+  if (typeof window === "undefined") return undefined;
+  const offre = new URLSearchParams(window.location.search).get("offre");
+  return offre && (serviceOptions as readonly string[]).includes(offre) ? offre : undefined;
+}
+
 type Status = "idle" | "submitting" | "success" | "error";
 
-export function ContactForm({ defaultService }: { defaultService?: string }) {
+function buildMailtoLink(data: ContactFormValues) {
+  const subject = `Demande de devis — ${data.company} (${data.trade})`;
+  const body = [
+    `Prénom : ${data.firstName}`,
+    `Nom : ${data.lastName}`,
+    `Entreprise : ${data.company}`,
+    `Téléphone : ${data.phone}`,
+    `E-mail : ${data.email}`,
+    `Métier : ${data.trade}`,
+    `Zone d'intervention : ${data.area}`,
+    `Service recherché : ${data.service}`,
+    `Budget publicitaire mensuel : ${data.budget}`,
+    `Objectif principal : ${data.goal}`,
+    data.message ? `Message : ${data.message}` : null,
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  return `${site.contact.emailHref}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+export function ContactForm() {
+  const [defaultService] = useState<string | undefined>(readDefaultServiceFromUrl);
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [serverMessage, setServerMessage] = useState<string | null>(null);
@@ -54,6 +82,13 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
       return;
     }
 
+    if (process.env.NEXT_PUBLIC_STATIC_EXPORT === "true") {
+      window.location.href = buildMailtoLink(parsed.data);
+      setStatus("success");
+      event.currentTarget.reset();
+      return;
+    }
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -91,9 +126,15 @@ export function ContactForm({ defaultService }: { defaultService?: string }) {
         className="flex flex-col items-center gap-4 rounded-2xl border border-orange/30 bg-orange/5 p-10 text-center"
       >
         <CheckCircle2 className="h-10 w-10 text-orange" aria-hidden="true" />
-        <h2 className="font-heading text-xl font-semibold">Votre demande a bien été envoyée.</h2>
+        <h2 className="font-heading text-xl font-semibold">
+          {process.env.NEXT_PUBLIC_STATIC_EXPORT === "true"
+            ? "Votre messagerie s'est ouverte avec votre demande pré-remplie."
+            : "Votre demande a bien été envoyée."}
+        </h2>
         <p className="max-w-md text-sm text-steel">
-          Nous revenons vers vous dans les meilleurs délais, {site.contact.hoursShort}.
+          {process.env.NEXT_PUBLIC_STATIC_EXPORT === "true"
+            ? `Il ne vous reste plus qu'à cliquer sur envoyer dans votre client mail. Nous revenons vers vous dans les meilleurs délais, ${site.contact.hoursShort}.`
+            : `Nous revenons vers vous dans les meilleurs délais, ${site.contact.hoursShort}.`}
         </p>
       </div>
     );

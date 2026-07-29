@@ -5,7 +5,6 @@ import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { site } from "@/content/site";
-import { serviceOptions } from "@/lib/validation";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 const title = "Contact | Demander un diagnostic";
@@ -19,14 +18,7 @@ export const metadata: Metadata = {
   openGraph: { title, description, url: "/contact" },
 };
 
-export default async function ContactPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ offre?: string }>;
-}) {
-  const { offre } = await searchParams;
-  const defaultService = offre && (serviceOptions as readonly string[]).includes(offre) ? offre : undefined;
-
+export default function ContactPage() {
   const breadcrumb = [
     { label: "Accueil", href: "/" },
     { label: "Contact" },
@@ -77,7 +69,7 @@ export default async function ContactPage({
           </div>
 
           <div className="rounded-2xl border border-border p-6 sm:p-8">
-            <ContactForm defaultService={defaultService} />
+            <ContactForm />
           </div>
         </Container>
       </section>

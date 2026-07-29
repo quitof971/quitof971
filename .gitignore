@@ -16,6 +16,7 @@
 # next.js
 /.next/
 /out/
+/hostinger-export.zip
 
 # production
 /build

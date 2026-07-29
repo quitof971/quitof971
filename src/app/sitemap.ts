@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/content/site";
 
+export const dynamic = "force-static";
+
 const routes = [
   "",
   "/acquisition-btp",
