@@ -35,7 +35,7 @@ export function MobileNav({
       role="dialog"
       aria-modal="true"
       aria-label="Menu de navigation"
-      className="fixed inset-0 z-[110] flex flex-col bg-black text-white sm:hidden"
+      className="fixed inset-0 z-[110] flex flex-col bg-black text-white xl:hidden"
     >
       <div className="flex items-center justify-between px-5 py-4">
         <Logo tone="light" imgSrc={logoSrc} />

@@ -10,7 +10,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCallButton } from "@/components/layout/MobileCallButton";
 import { CookieConsent } from "@/components/layout/CookieConsent";
-import { CustomCursor } from "@/components/layout/CustomCursor";
 import { resolvePublicAsset } from "@/lib/assets";
 
 const sora = Sora({
@@ -72,8 +71,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const logoOnDark = resolvePublicAsset("btp-leads-pro-logo-transparent");
-  const logoOnLight = resolvePublicAsset("btp-leads-pro-logo-dark");
+  const logo = resolvePublicAsset("btp-leads-pro-logo-transparent");
 
   return (
     <html lang="fr" className={`${sora.variable} ${inter.variable} h-full antialiased`}>
@@ -86,14 +84,13 @@ export default function RootLayout({
         <MotionConfig reducedMotion="user">
           <SkipLink />
           <TopBar />
-          <Header logoOnDark={logoOnDark} logoOnLight={logoOnLight} />
-          <main id="main-content" className="-mt-20 flex-1">
+          <Header logoSrc={logo} />
+          <main id="main-content" className="-mt-24 flex-1">
             {children}
           </main>
-          <Footer logoOnDark={logoOnDark} />
+          <Footer logoOnDark={logo} />
           <MobileCallButton />
           <CookieConsent />
-          <CustomCursor />
         </MotionConfig>
       </body>
     </html>

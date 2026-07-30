@@ -60,8 +60,16 @@ export function Logo({
   const leadsColor = tone === "light" ? "text-white" : "text-black";
 
   if (imgSrc) {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img src={imgSrc} alt="BTP Leads Pro" className={`h-9 w-auto ${className}`} />;
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={imgSrc}
+        alt="BTP Leads Pro"
+        width={1262}
+        height={345}
+        className={`h-9 w-auto object-contain sm:h-10 ${className}`}
+      />
+    );
   }
 
   return (
