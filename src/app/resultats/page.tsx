@@ -63,7 +63,7 @@ export default function ResultatsPage() {
 
       <section className="bg-white py-20 sm:py-28">
         <Container>
-          <SectionHeading eyebrow="Aperçu de reporting" title="Des captures issues d'un compte Google Ads réel." />
+          <SectionHeading eyebrow="Aperçu de reporting" title="Des captures issues du compte Google Ads d'un de nos clients." />
 
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
             {resultsProofs.map((proof, index) => (

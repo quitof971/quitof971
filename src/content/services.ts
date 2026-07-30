@@ -173,4 +173,4 @@ export const resultsProofs = [
 ];
 
 export const resultsCaption =
-  "Aperçu d'un reporting Google Ads. Les résultats dépendent notamment de la zone, du marché, du budget, de l'offre et de la réactivité commerciale.";
+  "Données issues d'un compte Google Ads d'un de nos clients. Les résultats dépendent notamment de la zone, du marché, du budget, de l'offre et de la réactivité commerciale.";
