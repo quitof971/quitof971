@@ -37,7 +37,7 @@ export function Header({ logoSrc }: { logoSrc?: string | null }) {
             <Link
               key={item.href}
               href={item.href}
-              className="whitespace-nowrap text-[15px] font-medium text-white/85 transition-colors hover:text-white"
+              className="whitespace-nowrap text-base font-medium text-white/85 transition-colors hover:text-white"
             >
               {item.label}
             </Link>
