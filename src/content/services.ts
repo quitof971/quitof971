@@ -154,15 +154,21 @@ export const aiAgents: AIAgent[] = [
 export const resultsProofs = [
   {
     id: "overview",
-    title: "Performances globales sur 30 jours",
-    file: "proof-dashboard-overview",
-    alt: "Tableau de bord Google Ads montrant impressions, interactions, conversions et coût sur 30 jours",
+    title: "Vue d'ensemble sur 30 jours",
+    file: "proof-overview",
+    alt: "Tableau de bord Google Ads montrant impressions, interactions, taux d'interaction et coût publicitaire sur 30 jours",
   },
   {
-    id: "campaign",
-    title: "Résultats d'une campagne dédiée",
-    file: "proof-dashboard-campaign",
-    alt: "Tableau de bord Google Ads montrant demandes générées, appels, formulaires et coût par demande",
+    id: "devices",
+    title: "Interactions par appareil",
+    file: "proof-devices",
+    alt: "Tableau de bord Google Ads montrant la répartition des interactions entre mobile, ordinateur et tablette",
+  },
+  {
+    id: "conversions",
+    title: "Conversions et diffusion",
+    file: "proof-conversions",
+    alt: "Tableau de bord Google Ads montrant les conversions enregistrées et la répartition des impressions",
   },
 ];
 

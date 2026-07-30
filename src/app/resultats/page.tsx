@@ -65,7 +65,7 @@ export default function ResultatsPage() {
         <Container>
           <SectionHeading eyebrow="Aperçu de reporting" title="Des captures issues d'un compte Google Ads réel." />
 
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
             {resultsProofs.map((proof, index) => (
               <Reveal key={proof.id} delay={index * 0.08}>
                 <ProofCard src={resolvePublicAsset(proof.file)} alt={proof.alt} title={proof.title} />

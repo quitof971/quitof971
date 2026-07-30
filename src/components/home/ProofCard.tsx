@@ -30,7 +30,7 @@ export function ProofCard({
               src={src}
               alt={alt}
               width={900}
-              height={600}
+              height={506}
               sizes="(max-width: 768px) 100vw, 500px"
               className="h-auto w-full object-contain"
             />
