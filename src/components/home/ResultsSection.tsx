@@ -17,7 +17,7 @@ export function ResultsSection() {
           text="Les campagnes sont suivies à partir de données concrètes : conversions enregistrées, coûts, fréquence d'exposition, appels et formulaires."
         />
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
           {resultsProofs.map((proof, index) => (
             <Reveal key={proof.id} delay={index * 0.08}>
               <ProofCard src={resolvePublicAsset(proof.file)} alt={proof.alt} title={proof.title} />

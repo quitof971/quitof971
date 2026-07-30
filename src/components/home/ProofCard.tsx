@@ -29,10 +29,10 @@ export function ProofCard({
             <Image
               src={src}
               alt={alt}
-              width={640}
-              height={420}
-              sizes="(max-width: 768px) 100vw, 400px"
-              className="h-auto w-full object-cover"
+              width={900}
+              height={600}
+              sizes="(max-width: 768px) 100vw, 500px"
+              className="h-auto w-full object-contain"
             />
             <span className="absolute right-3 top-3 rounded-full bg-black/60 p-2 text-white opacity-0 transition-opacity group-hover:opacity-100">
               <Maximize2 className="h-4 w-4" aria-hidden="true" />

@@ -153,22 +153,16 @@ export const aiAgents: AIAgent[] = [
 
 export const resultsProofs = [
   {
-    id: "performance",
-    title: "Performance globale des campagnes",
-    file: "proof-performance-campaigns",
-    alt: "Aperçu d'un reporting Google Ads montrant la performance globale des campagnes",
+    id: "overview",
+    title: "Performances globales sur 30 jours",
+    file: "proof-dashboard-overview",
+    alt: "Tableau de bord Google Ads montrant impressions, interactions, conversions et coût sur 30 jours",
   },
   {
-    id: "impressions",
-    title: "Répartition des impressions",
-    file: "proof-impressions-distribution",
-    alt: "Aperçu d'un reporting Google Ads montrant la répartition des impressions",
-  },
-  {
-    id: "frequency",
-    title: "Fréquence moyenne d'impression",
-    file: "proof-frequency",
-    alt: "Aperçu d'un reporting Google Ads montrant la fréquence moyenne d'impression",
+    id: "campaign",
+    title: "Résultats d'une campagne dédiée",
+    file: "proof-dashboard-campaign",
+    alt: "Tableau de bord Google Ads montrant demandes générées, appels, formulaires et coût par demande",
   },
 ];
 
