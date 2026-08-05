@@ -3,10 +3,15 @@ export type Offer = {
   name: string;
   badge?: string;
   tagline: string;
+  summary: string;
+  supportLevel: string;
   setup: string;
   fee: string;
   budget?: string;
   features: string[];
+  whatsNew?: string[];
+  idealIf: string[];
+  limits?: string[];
   cta: string;
   href: string;
 };
@@ -15,21 +20,38 @@ export const acquisitionOffers: Offer[] = [
   {
     id: "pilote",
     name: "Offre Pilote",
-    tagline: "Pour tester un premier service avec une campagne et une page dédiées.",
+    badge: "Pour démarrer",
+    tagline: "Pour tester un premier service avec une structure simple et professionnelle.",
+    summary: "Une campagne, une page dédiée et les outils essentiels pour mesurer les premières demandes.",
+    supportLevel: "Suivi mensuel",
     setup: "790 € HT",
     fee: "590 € HT / mois",
     budget: "800 € à 1 500 € / mois",
     features: [
       "1 campagne Google Ads Search",
-      "1 page de destination",
+      "1 service principal mis en avant",
+      "1 page de destination dédiée",
       "Recherche de mots-clés",
       "Rédaction des annonces",
       "Ciblage géographique",
-      "Formulaire et bouton téléphone",
-      "Tracking appels et formulaires",
-      "CRM simple",
+      "Formulaire de contact",
+      "Bouton téléphone",
+      "Suivi des appels et formulaires",
+      "CRM simple ou tableau de suivi",
       "Relances de base",
       "Reporting mensuel",
+    ],
+    idealIf: [
+      "Vous souhaitez tester Google Ads",
+      "Vous démarrez sur un seul service",
+      "Vous avez un budget limité",
+      "Vous n'avez jamais lancé de campagne structurée",
+    ],
+    limits: [
+      "Un seul service principal",
+      "Une seule page de destination",
+      "Structure publicitaire plus simple",
+      "Optimisation et suivi moins avancés que dans l'Offre Standard",
     ],
     cta: "Choisir l'Offre Pilote",
     href: "/contact?offre=Offre%20Pilote",
@@ -38,21 +60,46 @@ export const acquisitionOffers: Offer[] = [
     id: "standard",
     name: "Offre Standard",
     badge: "Recommandée",
-    tagline: "Pour structurer plusieurs services et améliorer les résultats chaque semaine.",
+    tagline: "Pour structurer sérieusement l'acquisition sur plusieurs services.",
+    summary: "Une structure plus complète, davantage de pages, un suivi hebdomadaire et une analyse plus poussée des prospects.",
+    supportLevel: "Suivi hebdomadaire",
     setup: "1 490 € HT",
     fee: "990 € HT / mois",
     budget: "1 500 € à 3 000 € / mois",
     features: [
-      "Jusqu'à 2 pages de destination",
-      "Campagnes structurées par service",
+      "Campagnes Google Ads Search structurées",
+      "Plusieurs services travaillés",
       "Plusieurs groupes d'annonces",
+      "Jusqu'à 2 pages de destination",
+      "Structure par service",
+      "Mots-clés ciblés",
       "Mots-clés négatifs",
+      "Annonces adaptées aux intentions de recherche",
+      "Suivi des appels et des formulaires",
       "Tracking complet",
       "Pipeline CRM",
       "Relances",
+      "Reporting",
       "Optimisation hebdomadaire",
-      "Analyse de la qualité des leads",
+      "Analyse de la qualité des prospects",
       "Recommandations commerciales",
+    ],
+    whatsNew: [
+      "Jusqu'à 2 pages au lieu d'une seule",
+      "Plusieurs services ou groupes d'annonces",
+      "Structure Google Ads plus avancée",
+      "Mots-clés négatifs et intentions de recherche mieux travaillés",
+      "Optimisation chaque semaine",
+      "CRM plus structuré",
+      "Analyse de la qualité des prospects",
+      "Recommandations pour améliorer la transformation commerciale",
+    ],
+    idealIf: [
+      "Votre entreprise possède plusieurs services rentables",
+      "Vous pouvez traiter plusieurs demandes",
+      "Vous souhaitez investir sérieusement",
+      "Vous voulez optimiser les campagnes chaque semaine",
+      "Vous avez besoin d'un vrai suivi des prospects",
     ],
     cta: "Découvrir l'Offre Standard",
     href: "/contact?offre=Offre%20Standard",
@@ -60,22 +107,50 @@ export const acquisitionOffers: Offer[] = [
   {
     id: "premium",
     name: "Pack RDV Premium",
-    tagline: "Pour réunir acquisition, conversion, suivi et visibilité locale.",
+    badge: "Accompagnement complet",
+    tagline: "Pour réunir acquisition, conversion, suivi commercial et visibilité locale.",
+    summary: "Le système le plus complet pour générer, suivre et mieux transformer les demandes de devis.",
+    supportLevel: "Accompagnement complet",
     setup: "1 990 € HT",
     fee: "1 390 € HT / mois",
     budget: "à partir de 2 000 € / mois",
     features: [
-      "Campagne Google Ads avancée",
-      "Landing pages",
+      "Structure Google Ads avancée",
+      "Campagnes Google Ads Search",
+      "Pages de destination",
       "Tracking complet",
-      "CRM et relances",
+      "CRM et pipeline commercial",
+      "Relances",
+      "Reporting",
       "Optimisation",
+      "Analyse des prospects",
+      "Suivi des rendez-vous",
+      "Suivi des devis",
       "Google Business Profile",
+      "Ajout et optimisation des services",
+      "Demandes d'avis clients",
       "Gestion des avis",
       "SEO local progressif",
       "Meta retargeting si pertinent",
-      "Analyse des prospects",
-      "Suivi des rendez-vous et devis",
+      "Recommandations commerciales",
+    ],
+    whatsNew: [
+      "Ajout de la visibilité locale",
+      "Optimisation de Google Business Profile",
+      "Accompagnement sur les avis clients",
+      "SEO local progressif",
+      "Retargeting Meta lorsque pertinent",
+      "Suivi des rendez-vous et des devis",
+      "Pilotage plus complet du parcours commercial",
+      "Acquisition jusqu'au suivi du devis",
+    ],
+    idealIf: [
+      "Vous êtes une PME du bâtiment structurée",
+      "Votre panier moyen est élevé",
+      "Vous pouvez traiter plusieurs rendez-vous",
+      "Vous souhaitez un accompagnement complet",
+      "Vous voulez travailler l'acquisition et la visibilité locale",
+      "Vous voulez suivre les prospects jusqu'au devis",
     ],
     cta: "Découvrir le Pack Premium",
     href: "/contact?offre=Pack%20RDV%20Premium",
@@ -84,6 +159,107 @@ export const acquisitionOffers: Offer[] = [
 
 export const pricingDisclaimer =
   "Les budgets publicitaires sont réglés directement à la plateforme publicitaire et ne sont pas inclus dans les honoraires de BTP Leads Pro.";
+
+export const pricingBudgetNotice =
+  "Le budget publicitaire Google Ads n'est pas inclus dans les honoraires de BTP Leads Pro. Il est payé directement à Google par le client.";
+
+export const pricingFeesNotice =
+  "Les frais de setup correspondent à la création et à la configuration initiale. La gestion mensuelle correspond au suivi, au reporting et à l'optimisation des campagnes.";
+
+export type ComparisonRow = {
+  feature: string;
+  pilote: string;
+  standard: string;
+  premium: string;
+};
+
+export const comparisonRows: ComparisonRow[] = [
+  { feature: "Nombre de services travaillés", pilote: "1 service", standard: "Plusieurs services", premium: "Plusieurs services" },
+  { feature: "Campagne Google Ads Search", pilote: "Inclus", standard: "Inclus", premium: "Inclus, structure avancée" },
+  { feature: "Pages de destination", pilote: "1 page", standard: "Jusqu'à 2 pages", premium: "Selon les besoins" },
+  { feature: "Recherche de mots-clés", pilote: "Inclus", standard: "Inclus", premium: "Inclus" },
+  { feature: "Mots-clés négatifs", pilote: "Non inclus", standard: "Inclus", premium: "Inclus" },
+  { feature: "Groupes d'annonces par service", pilote: "Essentiel", standard: "Plusieurs par service", premium: "Plusieurs par service" },
+  { feature: "Suivi des appels", pilote: "Inclus", standard: "Inclus", premium: "Inclus" },
+  { feature: "Suivi des formulaires", pilote: "Inclus", standard: "Inclus", premium: "Inclus" },
+  { feature: "Tracking complet", pilote: "Essentiel", standard: "Avancé", premium: "Avancé" },
+  { feature: "CRM ou pipeline", pilote: "CRM simple", standard: "Pipeline structuré", premium: "Pipeline + suivi RDV et devis" },
+  { feature: "Relances", pilote: "De base", standard: "Inclus", premium: "Inclus" },
+  { feature: "Reporting", pilote: "Mensuel", standard: "Mensuel", premium: "Mensuel" },
+  { feature: "Fréquence d'optimisation", pilote: "De base", standard: "Hebdomadaire", premium: "Hebdomadaire" },
+  { feature: "Analyse de la qualité des prospects", pilote: "Non inclus", standard: "Inclus", premium: "Inclus" },
+  { feature: "Recommandations commerciales", pilote: "Non inclus", standard: "Inclus", premium: "Inclus" },
+  { feature: "Google Business Profile", pilote: "Non inclus", standard: "Non inclus", premium: "Inclus" },
+  { feature: "Gestion des avis", pilote: "Non inclus", standard: "Non inclus", premium: "Inclus" },
+  { feature: "SEO local", pilote: "Non inclus", standard: "Non inclus", premium: "Progressif" },
+  { feature: "Meta retargeting", pilote: "Non inclus", standard: "Non inclus", premium: "Selon les besoins" },
+  { feature: "Suivi des rendez-vous", pilote: "Non inclus", standard: "Non inclus", premium: "Suivi complet" },
+  { feature: "Suivi des devis", pilote: "Non inclus", standard: "Non inclus", premium: "Suivi complet" },
+];
+
+export type OfferGuide = {
+  question: string;
+  answer: string;
+  offerName: string;
+};
+
+export const offerGuides: OfferGuide[] = [
+  {
+    question: "Je veux tester Google Ads sur un service",
+    answer: "Choisissez l'Offre Pilote.",
+    offerName: "Offre Pilote",
+  },
+  {
+    question: "Je veux développer plusieurs services et optimiser chaque semaine",
+    answer: "Choisissez l'Offre Standard.",
+    offerName: "Offre Standard",
+  },
+  {
+    question: "Je veux un système complet avec acquisition, visibilité locale et suivi des devis",
+    answer: "Choisissez le Pack RDV Premium.",
+    offerName: "Pack RDV Premium",
+  },
+];
+
+export type OfferFaqItem = {
+  question: string;
+  answer: string;
+};
+
+export const offersFaqItems: OfferFaqItem[] = [
+  {
+    question: "Quelle est la différence entre l'Offre Pilote et l'Offre Standard ?",
+    answer:
+      "L'Offre Pilote permet de tester un service avec une campagne et une page dédiées. L'Offre Standard permet de travailler une structure plus avancée, plusieurs services ou groupes d'annonces, jusqu'à deux pages, un suivi hebdomadaire et une analyse plus poussée des prospects.",
+  },
+  {
+    question: "L'Offre Standard contient-elle les éléments de l'Offre Pilote ?",
+    answer:
+      "Les deux offres reposent sur les mêmes fondamentaux : Google Ads, page de destination, suivi des appels et formulaires, CRM, reporting et relances. L'Offre Standard approfondit ces éléments avec une structure plus complète et un suivi plus régulier.",
+  },
+  {
+    question: "Que contient le Pack RDV Premium en plus ?",
+    answer:
+      "Il ajoute notamment la visibilité locale, Google Business Profile, les avis clients, le SEO local progressif, le retargeting lorsque pertinent et un suivi plus complet des rendez-vous et devis.",
+  },
+  {
+    question: "Le budget Google Ads est-il inclus ?",
+    answer: "Non. Le budget publicitaire est payé directement à Google et reste séparé des honoraires de BTP Leads Pro.",
+  },
+  {
+    question: "Puis-je commencer avec l'Offre Pilote puis passer à l'Offre Standard ?",
+    answer: "Oui. L'Offre Pilote peut servir de première étape avant de développer une structure plus complète.",
+  },
+  {
+    question: "Quelle offre choisir si je propose plusieurs services ?",
+    answer: "L'Offre Standard est généralement plus adaptée lorsque plusieurs services rentables doivent être travaillés.",
+  },
+  {
+    question: "Quelle offre choisir pour travailler également ma visibilité locale ?",
+    answer:
+      "Le Pack RDV Premium est le plus adapté, car il intègre l'acquisition, Google Business Profile, les avis et le SEO local progressif.",
+  },
+];
 
 export const localGrowth = {
   title: "Renforcez également votre présence locale.",

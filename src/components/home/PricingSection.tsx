@@ -18,7 +18,7 @@ export function PricingSection() {
         <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
           {acquisitionOffers.map((offer, index) => (
             <Reveal key={offer.id} delay={index * 0.1}>
-              <PricingCard offer={offer} featured={Boolean(offer.badge)} />
+              <PricingCard offer={offer} featured={offer.badge === "Recommandée"} />
             </Reveal>
           ))}
         </div>

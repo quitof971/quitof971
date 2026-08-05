@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Info } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
+import { Accordion } from "@/components/ui/Accordion";
+import { ComparisonTable } from "@/components/ui/ComparisonTable";
 import { PricingSection } from "@/components/home/PricingSection";
 import { LocalGrowthSection } from "@/components/home/LocalGrowthSection";
 import { ConversionSection } from "@/components/home/ConversionSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
-import { aiPacks } from "@/content/offers";
+import {
+  aiPacks,
+  comparisonRows,
+  offerGuides,
+  offersFaqItems,
+  pricingBudgetNotice,
+  pricingFeesNotice,
+} from "@/content/offers";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 const title = "Offres et tarifs | Acquisition, suivi et IA pour le BTP";
@@ -46,6 +56,61 @@ export default function OffresPage() {
       />
 
       <PricingSection />
+
+      <section className="bg-[#F0F2F5] py-16 sm:py-20">
+        <Container>
+          <div className="mx-auto flex max-w-3xl flex-col gap-3 rounded-2xl border border-orange/25 bg-white p-6 sm:p-8">
+            <p className="flex items-start gap-2.5 text-sm font-medium text-black sm:text-base">
+              <Info className="mt-0.5 h-5 w-5 shrink-0 text-orange" aria-hidden="true" />
+              {pricingBudgetNotice}
+            </p>
+            <p className="pl-[30px] text-sm text-steel">{pricingFeesNotice}</p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-white py-20 sm:py-28">
+        <Container>
+          <SectionHeading eyebrow="Comparatif" title="Comparez les offres." />
+          <p className="mt-2 text-xs text-steel sm:hidden">Faites glisser le tableau vers la droite pour tout voir →</p>
+          <div className="mt-8">
+            <ComparisonTable rows={comparisonRows} />
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-[#F0F2F5] py-20 sm:py-28">
+        <Container>
+          <SectionHeading eyebrow="Aide au choix" title="Quelle offre correspond à votre entreprise ?" align="center" className="mx-auto text-center" />
+
+          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-5 sm:grid-cols-3">
+            {offerGuides.map((guide, index) => (
+              <Reveal key={guide.question} delay={index * 0.08}>
+                <div className="flex h-full flex-col gap-3 rounded-2xl border border-border bg-white p-6 text-center">
+                  <p className="font-heading text-base font-semibold">{guide.question}</p>
+                  <p className="mt-auto text-sm font-medium text-orange">{guide.answer}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="mt-10 flex justify-center">
+            <Button href="/contact" size="lg">
+              Demander un diagnostic
+            </Button>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-white py-20 sm:py-28">
+        <Container>
+          <SectionHeading eyebrow="Questions fréquentes" title="Les offres, en détail." />
+          <div className="mt-10">
+            <Accordion items={offersFaqItems} />
+          </div>
+        </Container>
+      </section>
+
       <LocalGrowthSection />
       <ConversionSection />
 
