@@ -10,7 +10,7 @@ const description = "Comment BTP Leads Pro collecte, utilise et protège les don
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/politique-confidentialite" },
+  alternates: { canonical: "/politique-confidentialite/" },
   robots: { index: true, follow: true },
 };
 

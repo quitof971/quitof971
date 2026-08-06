@@ -15,8 +15,8 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/a-propos" },
-  openGraph: { title, description, url: "/a-propos" },
+  alternates: { canonical: "/a-propos/" },
+  openGraph: { title, description, url: "/a-propos/" },
 };
 
 const values = [

@@ -1,11 +1,4 @@
-# BTP Leads Pro — routing for the Next.js static export on Apache (Hostinger).
-#
-# `next build` with output:"export" writes both <route>.html and a
-# same-named <route>/ directory (client-navigation payload files, no
-# index.html inside). Apache's default DirectorySlash behaviour treats
-# a clean URL like /offres as a request for the offres/ directory,
-# 301-redirects to /offres/, then 403s because that directory has no
-# index file. This affects every route except the homepage.
+# BTP Leads Pro — Apache/LiteSpeed config for the Next.js static export.
 
 RewriteEngine On
 
@@ -13,24 +6,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Force the apex domain (no www) to avoid two hostnames serving
-# identical content.
+# Force the apex domain (no www) so a single canonical hostname serves
+# the site.
 RewriteCond %{HTTP_HOST} ^www\.btpleadspro\.fr$ [NC]
 RewriteRule ^ https://btpleadspro.fr%{REQUEST_URI} [L,R=301]
-
-# Canonicalize: if a request ends in a trailing slash and a matching
-# .html file exists one level up, redirect to the slash-less URL.
-RewriteCond %{REQUEST_URI} ^/(.+)/$
-RewriteCond %{DOCUMENT_ROOT}/%1.html -f
-RewriteRule ^ /%1 [R=301,L]
-
-# Serve the matching .html file for a clean URL even though a
-# same-named directory also exists.
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+[^/])$ $1.html [L]
-
-# Stop Apache auto-redirecting /page -> /page/ for directories that
-# only hold Next.js's internal payload files.
-DirectorySlash Off
 
 ErrorDocument 404 /404.html

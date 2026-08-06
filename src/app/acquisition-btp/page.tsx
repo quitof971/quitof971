@@ -18,8 +18,8 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/acquisition-btp" },
-  openGraph: { title, description, url: "/acquisition-btp" },
+  alternates: { canonical: "/acquisition-btp/" },
+  openGraph: { title, description, url: "/acquisition-btp/" },
 };
 
 export default function AcquisitionBTPPage() {
@@ -39,7 +39,7 @@ export default function AcquisitionBTPPage() {
             serviceJsonLd({
               name: "Acquisition digitale BTP",
               description,
-              url: "/acquisition-btp",
+              url: "/acquisition-btp/",
             }),
           ]),
         }}
