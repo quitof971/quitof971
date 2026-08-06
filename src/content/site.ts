@@ -17,7 +17,7 @@ export const site = {
     titleDefault: "BTP Leads Pro | Google Ads et acquisition digitale pour le BTP",
     descriptionDefault:
       "BTP Leads Pro accompagne les entreprises du bâtiment avec Google Ads, des landing pages, le suivi des prospects, les relances et l'automatisation.",
-    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.btpleadspro.fr",
+    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://btpleadspro.fr",
   },
   nav: [
     { label: "Services", href: "/acquisition-btp" },

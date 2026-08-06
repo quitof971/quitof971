@@ -11,7 +11,7 @@ import { FinalCTA } from "@/components/home/FinalCTA";
 import { acquisitionFeatureDetails } from "@/content/services";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/jsonld";
 
-const title = "Acquisition BTP | Google Ads et pages de destination";
+const title = "Acquisition Google Ads pour le BTP";
 const description =
   "Campagnes Google Ads Search, pages de destination, tracking et CRM pour générer des demandes de devis qualifiées dans le bâtiment.";
 

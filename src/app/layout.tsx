@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["Organization", "ProfessionalService"],
   name: site.brand.name,
   legalName: site.brand.legalName,
   description: site.seo.descriptionDefault,

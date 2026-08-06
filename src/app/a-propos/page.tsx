@@ -8,7 +8,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
-const title = "À propos | BTP Leads Pro";
+const title = "À propos";
 const description =
   "BTP Leads Pro est une structure spécialisée dans l'acquisition digitale et le suivi commercial pour les entreprises du bâtiment.";
 

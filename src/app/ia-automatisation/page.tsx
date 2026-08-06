@@ -11,7 +11,7 @@ import { aiAgents } from "@/content/services";
 import { aiPacks, aiDisclaimers } from "@/content/offers";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/jsonld";
 
-const title = "IA & automatisation | Agents IA pour le bâtiment";
+const title = "Agents IA et automatisation pour le BTP";
 const description =
   "Agents IA téléphonique, commercial, marketing, SEO, comptable, juridique et recrutement pour automatiser les tâches répétitives du bâtiment.";
 

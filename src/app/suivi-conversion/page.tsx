@@ -8,7 +8,7 @@ import { ConversionSection } from "@/components/home/ConversionSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/jsonld";
 
-const title = "Suivi & conversion | Relances et organisation des prospects";
+const title = "Suivi des leads et conversion BTP";
 const description =
   "Suivi des leads, scripts de relance et optimisation de la conversion pour ne plus perdre de demandes de devis dans le bâtiment.";
 

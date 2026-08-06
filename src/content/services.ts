@@ -155,19 +155,19 @@ export const resultsProofs = [
   {
     id: "overview",
     title: "Vue d'ensemble sur 30 jours",
-    file: "proof-overview",
+    file: "performances-google-ads-vue-ensemble",
     alt: "Tableau de bord Google Ads montrant impressions, interactions, taux d'interaction et coût publicitaire sur 30 jours",
   },
   {
     id: "devices",
     title: "Interactions par appareil",
-    file: "proof-devices",
+    file: "performances-google-ads-interactions-par-appareil",
     alt: "Tableau de bord Google Ads montrant la répartition des interactions entre mobile, ordinateur et tablette",
   },
   {
     id: "conversions",
     title: "Conversions et diffusion",
-    file: "proof-conversions",
+    file: "performances-google-ads-conversions-diffusion",
     alt: "Tableau de bord Google Ads montrant les conversions enregistrées et la répartition des impressions",
   },
 ];

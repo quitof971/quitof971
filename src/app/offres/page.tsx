@@ -21,9 +21,9 @@ import {
   pricingBudgetNotice,
   pricingFeesNotice,
 } from "@/content/offers";
-import { breadcrumbJsonLd } from "@/lib/jsonld";
+import { breadcrumbJsonLd, faqJsonLd } from "@/lib/jsonld";
 
-const title = "Offres et tarifs | Acquisition, suivi et IA pour le BTP";
+const title = "Offres Google Ads pour entreprises du bâtiment";
 const description =
   "Tarifs des offres Pilote, Standard et Pack RDV Premium, des options de suivi & conversion et des packs IA pour les entreprises du bâtiment.";
 
@@ -45,7 +45,9 @@ export default function OffresPage() {
       <Script
         id="offres-jsonld"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(breadcrumb)) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([breadcrumbJsonLd(breadcrumb), faqJsonLd(offersFaqItems)]),
+        }}
       />
 
       <PageHero

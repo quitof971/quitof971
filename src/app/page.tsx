@@ -14,24 +14,12 @@ import { FAQSection } from "@/components/home/FAQSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { faqItems } from "@/content/faq";
 import { site } from "@/content/site";
+import { faqJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: site.seo.titleDefault,
   description: site.seo.descriptionDefault,
   alternates: { canonical: "/" },
-};
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
 };
 
 export default function HomePage() {
@@ -40,7 +28,7 @@ export default function HomePage() {
       <Script
         id="faq-jsonld"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqItems)) }}
       />
       <Hero />
       <ExpertiseMarquee />

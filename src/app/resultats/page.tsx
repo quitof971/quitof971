@@ -10,7 +10,7 @@ import { resultsProofs, resultsCaption } from "@/content/services";
 import { resolvePublicAsset } from "@/lib/assets";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
-const title = "Résultats | Méthode de mesure des campagnes Google Ads";
+const title = "Résultats Google Ads";
 const description =
   "Comment BTP Leads Pro mesure les campagnes Google Ads : conversions, coûts, fréquence d'exposition, appels et formulaires.";
 

@@ -27,12 +27,12 @@ export function ComparisonTable({ rows }: { rows: ComparisonRow[] }) {
       <table className="w-full min-w-[720px] border-collapse text-sm">
         <thead>
           <tr className="bg-[#F7F8FA]">
-            <th className="sticky left-0 z-10 bg-[#F7F8FA] px-5 py-4 text-left font-heading text-sm font-semibold text-black">
+            <th scope="col" className="sticky left-0 z-10 bg-[#F7F8FA] px-5 py-4 text-left font-heading text-sm font-semibold text-black">
               Fonctionnalité
             </th>
-            <th className="px-5 py-4 text-left font-heading text-sm font-semibold text-black">Offre Pilote</th>
-            <th className="px-5 py-4 text-left font-heading text-sm font-semibold text-orange">Offre Standard</th>
-            <th className="px-5 py-4 text-left font-heading text-sm font-semibold text-black">Pack RDV Premium</th>
+            <th scope="col" className="px-5 py-4 text-left font-heading text-sm font-semibold text-black">Offre Pilote</th>
+            <th scope="col" className="px-5 py-4 text-left font-heading text-sm font-semibold text-orange">Offre Standard</th>
+            <th scope="col" className="px-5 py-4 text-left font-heading text-sm font-semibold text-black">Pack RDV Premium</th>
           </tr>
         </thead>
         <tbody>

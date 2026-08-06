@@ -27,7 +27,7 @@ fi
 STATIC_EXPORT=true NEXT_PUBLIC_STATIC_EXPORT=true npx next build
 
 cd out
-zip -r ../hostinger-export.zip . -x ".*"
+zip -r ../hostinger-export.zip . -x ".DS_Store" -x "*/.DS_Store"
 cd ..
 
 echo "Export ready: hostinger-export.zip"

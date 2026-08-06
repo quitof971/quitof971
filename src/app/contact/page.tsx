@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import { site } from "@/content/site";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 
-const title = "Contact | Demander un diagnostic";
+const title = "Contact";
 const description =
   "Contactez BTP Leads Pro pour un diagnostic de votre acquisition digitale : téléphone, e-mail ou formulaire détaillé.";
 
