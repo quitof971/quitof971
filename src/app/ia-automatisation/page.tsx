@@ -18,8 +18,8 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/ia-automatisation/" },
-  openGraph: { title, description, url: "/ia-automatisation/" },
+  alternates: { canonical: "/ia-automatisation" },
+  openGraph: { title, description, url: "/ia-automatisation" },
 };
 
 export default function IAAutomatisationPage() {
@@ -39,7 +39,7 @@ export default function IAAutomatisationPage() {
             serviceJsonLd({
               name: "Agents IA et automatisation pour le BTP",
               description,
-              url: "/ia-automatisation/",
+              url: "/ia-automatisation",
             }),
           ]),
         }}

@@ -1,4 +1,11 @@
-# BTP Leads Pro — Apache/LiteSpeed config for the Next.js static export.
+# BTP Leads Pro — routing for the Next.js static export on Apache/LiteSpeed (Hostinger).
+#
+# `next build` with output:"export" writes both <route>.html and a
+# same-named <route>/ directory (client-navigation payload files, no
+# index.html inside). Left to its default behavior, a web server that
+# notices /offres matches a real directory redirects to /offres/ first,
+# then 403s there since that directory has no index file — breaking
+# every route except the homepage.
 
 RewriteEngine On
 
@@ -10,5 +17,14 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # the site.
 RewriteCond %{HTTP_HOST} ^www\.btpleadspro\.fr$ [NC]
 RewriteRule ^ https://btpleadspro.fr%{REQUEST_URI} [L,R=301]
+
+# Serve the matching .html file for a clean URL even though a
+# same-named directory also exists.
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+[^/])$ $1.html [L]
+
+# Stop the server auto-redirecting /page -> /page/ for directories
+# that only hold Next.js's internal payload files.
+DirectorySlash Off
 
 ErrorDocument 404 /404.html

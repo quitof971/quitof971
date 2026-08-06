@@ -9,7 +9,7 @@ const description = "Mentions légales de BTPleadsPro, éditeur du site BTP Lead
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/mentions-legales/" },
+  alternates: { canonical: "/mentions-legales" },
   robots: { index: true, follow: true },
 };
 

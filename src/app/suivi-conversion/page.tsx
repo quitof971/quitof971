@@ -15,8 +15,8 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/suivi-conversion/" },
-  openGraph: { title, description, url: "/suivi-conversion/" },
+  alternates: { canonical: "/suivi-conversion" },
+  openGraph: { title, description, url: "/suivi-conversion" },
 };
 
 const steps = [
@@ -51,7 +51,7 @@ export default function SuiviConversionPage() {
             serviceJsonLd({
               name: "Suivi et conversion des leads BTP",
               description,
-              url: "/suivi-conversion/",
+              url: "/suivi-conversion",
             }),
           ]),
         }}

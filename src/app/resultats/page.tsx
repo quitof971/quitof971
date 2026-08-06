@@ -17,8 +17,8 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/resultats/" },
-  openGraph: { title, description, url: "/resultats/" },
+  alternates: { canonical: "/resultats" },
+  openGraph: { title, description, url: "/resultats" },
 };
 
 const measurementPoints = [

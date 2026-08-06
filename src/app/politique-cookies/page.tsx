@@ -9,7 +9,7 @@ const description = "Les cookies utilisés par BTP Leads Pro et la gestion de vo
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/politique-cookies/" },
+  alternates: { canonical: "/politique-cookies" },
   robots: { index: true, follow: true },
 };
 

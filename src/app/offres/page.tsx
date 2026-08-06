@@ -30,8 +30,8 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/offres/" },
-  openGraph: { title, description, url: "/offres/" },
+  alternates: { canonical: "/offres" },
+  openGraph: { title, description, url: "/offres" },
 };
 
 export default function OffresPage() {
