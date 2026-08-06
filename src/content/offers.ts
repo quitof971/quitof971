@@ -9,9 +9,6 @@ export type Offer = {
   fee: string;
   budget?: string;
   features: string[];
-  whatsNew?: string[];
-  idealIf: string[];
-  limits?: string[];
   cta: string;
   href: string;
 };
@@ -40,18 +37,6 @@ export const acquisitionOffers: Offer[] = [
       "CRM simple ou tableau de suivi",
       "Relances de base",
       "Reporting mensuel",
-    ],
-    idealIf: [
-      "Vous souhaitez tester Google Ads",
-      "Vous démarrez sur un seul service",
-      "Vous avez un budget limité",
-      "Vous n'avez jamais lancé de campagne structurée",
-    ],
-    limits: [
-      "Un seul service principal",
-      "Une seule page de destination",
-      "Structure publicitaire plus simple",
-      "Optimisation et suivi moins avancés que dans l'Offre Standard",
     ],
     cta: "Choisir l'Offre Pilote",
     href: "/contact?offre=Offre%20Pilote",
@@ -83,23 +68,6 @@ export const acquisitionOffers: Offer[] = [
       "Optimisation hebdomadaire",
       "Analyse de la qualité des prospects",
       "Recommandations commerciales",
-    ],
-    whatsNew: [
-      "Jusqu'à 2 pages au lieu d'une seule",
-      "Plusieurs services ou groupes d'annonces",
-      "Structure Google Ads plus avancée",
-      "Mots-clés négatifs et intentions de recherche mieux travaillés",
-      "Optimisation chaque semaine",
-      "CRM plus structuré",
-      "Analyse de la qualité des prospects",
-      "Recommandations pour améliorer la transformation commerciale",
-    ],
-    idealIf: [
-      "Votre entreprise possède plusieurs services rentables",
-      "Vous pouvez traiter plusieurs demandes",
-      "Vous souhaitez investir sérieusement",
-      "Vous voulez optimiser les campagnes chaque semaine",
-      "Vous avez besoin d'un vrai suivi des prospects",
     ],
     cta: "Découvrir l'Offre Standard",
     href: "/contact?offre=Offre%20Standard",
@@ -134,26 +102,155 @@ export const acquisitionOffers: Offer[] = [
       "Meta retargeting si pertinent",
       "Recommandations commerciales",
     ],
-    whatsNew: [
-      "Ajout de la visibilité locale",
-      "Optimisation de Google Business Profile",
-      "Accompagnement sur les avis clients",
-      "SEO local progressif",
-      "Retargeting Meta lorsque pertinent",
-      "Suivi des rendez-vous et des devis",
-      "Pilotage plus complet du parcours commercial",
-      "Acquisition jusqu'au suivi du devis",
-    ],
-    idealIf: [
-      "Vous êtes une PME du bâtiment structurée",
-      "Votre panier moyen est élevé",
-      "Vous pouvez traiter plusieurs rendez-vous",
-      "Vous souhaitez un accompagnement complet",
-      "Vous voulez travailler l'acquisition et la visibilité locale",
-      "Vous voulez suivre les prospects jusqu'au devis",
-    ],
     cta: "Découvrir le Pack Premium",
     href: "/contact?offre=Pack%20RDV%20Premium",
+  },
+];
+
+export type ChecklistLevel = {
+  included: boolean;
+  detail?: string;
+};
+
+export type OfferChecklistRow = {
+  feature: string;
+  pilote: ChecklistLevel;
+  standard: ChecklistLevel;
+  premium: ChecklistLevel;
+};
+
+export const offerChecklist: OfferChecklistRow[] = [
+  {
+    feature: "Campagne Google Ads Search",
+    pilote: { included: true, detail: "1 campagne Google Ads" },
+    standard: { included: true, detail: "Campagnes structurées" },
+    premium: { included: true, detail: "Structure Google Ads avancée" },
+  },
+  {
+    feature: "Services ou groupes d'annonces",
+    pilote: { included: true, detail: "1 service principal" },
+    standard: { included: true, detail: "Plusieurs groupes d'annonces" },
+    premium: { included: true, detail: "Plusieurs services" },
+  },
+  {
+    feature: "Pages de destination",
+    pilote: { included: true, detail: "1 page de destination" },
+    standard: { included: true, detail: "Jusqu'à 2 pages" },
+    premium: { included: true, detail: "Selon les besoins" },
+  },
+  {
+    feature: "Recherche de mots-clés",
+    pilote: { included: true },
+    standard: { included: true },
+    premium: { included: true },
+  },
+  {
+    feature: "Mots-clés négatifs",
+    pilote: { included: false },
+    standard: { included: true },
+    premium: { included: true },
+  },
+  {
+    feature: "Rédaction des annonces",
+    pilote: { included: true },
+    standard: { included: true },
+    premium: { included: true },
+  },
+  {
+    feature: "Ciblage géographique",
+    pilote: { included: true },
+    standard: { included: true },
+    premium: { included: true },
+  },
+  {
+    feature: "Suivi des appels",
+    pilote: { included: true },
+    standard: { included: true },
+    premium: { included: true },
+  },
+  {
+    feature: "Suivi des formulaires",
+    pilote: { included: true },
+    standard: { included: true },
+    premium: { included: true },
+  },
+  {
+    feature: "Tracking complet",
+    pilote: { included: true, detail: "Suivi essentiel" },
+    standard: { included: true, detail: "Tracking avancé" },
+    premium: { included: true, detail: "Tracking avancé" },
+  },
+  {
+    feature: "CRM ou pipeline commercial",
+    pilote: { included: true, detail: "CRM simple" },
+    standard: { included: true, detail: "Pipeline structuré" },
+    premium: { included: true, detail: "Pipeline + RDV et devis" },
+  },
+  {
+    feature: "Relances des prospects",
+    pilote: { included: true, detail: "De base" },
+    standard: { included: true },
+    premium: { included: true },
+  },
+  {
+    feature: "Reporting",
+    pilote: { included: true, detail: "Mensuel" },
+    standard: { included: true, detail: "Mensuel" },
+    premium: { included: true, detail: "Mensuel" },
+  },
+  {
+    feature: "Optimisation des campagnes",
+    pilote: { included: true, detail: "De base" },
+    standard: { included: true, detail: "Hebdomadaire" },
+    premium: { included: true, detail: "Hebdomadaire" },
+  },
+  {
+    feature: "Analyse de la qualité des prospects",
+    pilote: { included: false },
+    standard: { included: true },
+    premium: { included: true },
+  },
+  {
+    feature: "Recommandations commerciales",
+    pilote: { included: false },
+    standard: { included: true },
+    premium: { included: true },
+  },
+  {
+    feature: "Google Business Profile",
+    pilote: { included: false },
+    standard: { included: false },
+    premium: { included: true },
+  },
+  {
+    feature: "Gestion des avis clients",
+    pilote: { included: false },
+    standard: { included: false },
+    premium: { included: true },
+  },
+  {
+    feature: "SEO local progressif",
+    pilote: { included: false },
+    standard: { included: false },
+    premium: { included: true },
+  },
+  {
+    feature: "Meta retargeting",
+    pilote: { included: false },
+    standard: { included: false },
+    premium: { included: true, detail: "Selon pertinence" },
+  },
+  {
+    feature: "Suivi des rendez-vous",
+    pilote: { included: false },
+    standard: { included: false },
+    premium: { included: true },
+  },
+  {
+    feature: "Suivi des devis",
+    pilote: { included: false },
+    standard: { included: false },
+    premium: { included: true },
   },
 ];
 

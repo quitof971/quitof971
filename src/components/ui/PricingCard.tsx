@@ -1,8 +1,10 @@
-import { Check, ThumbsUp, TrendingUp, TriangleAlert } from "lucide-react";
-import { Offer } from "@/content/offers";
+import { Check, X } from "lucide-react";
+import { Offer, offerChecklist } from "@/content/offers";
 import { Button } from "./Button";
 import { Badge } from "./Badge";
 import { TiltCard } from "./TiltCard";
+
+type OfferId = "pilote" | "standard" | "premium";
 
 export function PricingCard({ offer, featured = false }: { offer: Offer; featured?: boolean }) {
   return (
@@ -51,79 +53,45 @@ export function PricingCard({ offer, featured = false }: { offer: Offer; feature
         </div>
       </div>
 
-      <ul className="flex flex-col gap-3">
-        {offer.features.map((feature) => (
-          <li key={feature} className="flex items-start gap-2.5 text-sm">
-            <Check
-              className={`mt-0.5 h-4 w-4 shrink-0 ${featured ? "text-orange-light" : "text-orange"}`}
-              aria-hidden="true"
-            />
-            <span className={featured ? "text-white/85" : "text-black/80"}>{feature}</span>
-          </li>
-        ))}
+      <ul className={`flex flex-col gap-2.5 border-t pt-6 ${featured ? "border-white/10" : "border-border"}`}>
+        {offerChecklist.map((row) => {
+          const level = row[offer.id as OfferId];
+          return (
+            <li key={row.feature} className="flex min-h-[20px] items-start gap-2.5 text-sm">
+              {level.included ? (
+                <Check
+                  className={`mt-0.5 h-4 w-4 shrink-0 ${featured ? "text-orange-light" : "text-orange"}`}
+                  aria-hidden="true"
+                />
+              ) : (
+                <X
+                  className={`mt-0.5 h-4 w-4 shrink-0 ${featured ? "text-white/30" : "text-steel/50"}`}
+                  aria-hidden="true"
+                />
+              )}
+              <span
+                className={
+                  level.included
+                    ? featured
+                      ? "text-white/85"
+                      : "text-black/80"
+                    : featured
+                      ? "text-white/35"
+                      : "text-steel/60"
+                }
+              >
+                <span className="sr-only">{level.included ? "Inclus : " : "Non inclus : "}</span>
+                {row.feature}
+                {level.included && level.detail ? (
+                  <span className={featured ? "text-white/55" : "text-steel"}> — {level.detail}</span>
+                ) : null}
+              </span>
+            </li>
+          );
+        })}
       </ul>
 
-      <div className="flex flex-col gap-3">
-        {offer.whatsNew ? (
-          <div
-            className={`rounded-xl border-l-4 p-4 text-sm ${
-              featured ? "border-blue bg-blue/10" : "border-blue bg-blue/5"
-            }`}
-          >
-            <p className={`mb-2 flex items-center gap-1.5 font-heading text-sm font-semibold ${featured ? "text-white" : "text-blue-dark"}`}>
-              <TrendingUp className="h-4 w-4 shrink-0" aria-hidden="true" />
-              Ce qui change par rapport à {offer.id === "premium" ? "l'Offre Standard" : "l'Offre Pilote"}
-            </p>
-            <ul className="flex flex-col gap-1.5">
-              {offer.whatsNew.map((item) => (
-                <li key={item} className={featured ? "text-white/80" : "text-black/75"}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
-
-        <div
-          className={`rounded-xl border-l-4 p-4 text-sm ${
-            featured ? "border-orange bg-orange/10" : "border-orange bg-orange/5"
-          }`}
-        >
-          <p className={`mb-2 flex items-center gap-1.5 font-heading text-sm font-semibold ${featured ? "text-white" : "text-orange"}`}>
-            <ThumbsUp className="h-4 w-4 shrink-0" aria-hidden="true" />
-            Idéal si
-          </p>
-          <ul className="flex flex-col gap-1.5">
-            {offer.idealIf.map((item) => (
-              <li key={item} className={featured ? "text-white/80" : "text-black/75"}>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {offer.limits ? (
-          <div
-            className={`rounded-xl border-l-4 p-4 text-sm ${
-              featured ? "border-white/30 bg-white/5" : "border-steel/40 bg-steel/5"
-            }`}
-          >
-            <p className={`mb-2 flex items-center gap-1.5 font-heading text-sm font-semibold ${featured ? "text-white" : "text-steel"}`}>
-              <TriangleAlert className="h-4 w-4 shrink-0" aria-hidden="true" />
-              Limites de l&apos;offre
-            </p>
-            <ul className="flex flex-col gap-1.5">
-              {offer.limits.map((item) => (
-                <li key={item} className={featured ? "text-white/70" : "text-steel"}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
-      </div>
-
-      <Button href={offer.href} variant="primary" className="w-full">
+      <Button href={offer.href} variant="primary" className="mt-auto w-full">
         {offer.cta}
       </Button>
     </TiltCard>
