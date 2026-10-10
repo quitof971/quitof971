@@ -4,7 +4,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { site } from "@/content/site";
 
 const title = "Politique de cookies";
-const description = "Les cookies utilisés par BTP Leads Pro et la gestion de votre consentement.";
+const description = "Les cookies utilisés par Cyberattract et la gestion de votre consentement.";
 
 export const metadata: Metadata = {
   title,

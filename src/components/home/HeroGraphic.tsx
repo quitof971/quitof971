@@ -37,8 +37,8 @@ export function HeroGraphic() {
       <svg viewBox="0 0 560 520" className="h-full w-full overflow-visible" aria-hidden="true" fill="none">
         <defs>
           <linearGradient id="roofline" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#FC4C01" />
-            <stop offset="100%" stopColor="#04A5EF" />
+            <stop offset="0%" stopColor="#0A4DF5" />
+            <stop offset="100%" stopColor="#8B2FEF" />
           </linearGradient>
           <linearGradient id="cardFade" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.08" />
@@ -69,7 +69,7 @@ export function HeroGraphic() {
 
         <motion.path
           d="M100 420 L220 340 L300 380 L460 220"
-          stroke="#FC8E01"
+          stroke="#22D3EE"
           strokeWidth="3"
           strokeDasharray="2 10"
           strokeLinecap="round"
@@ -80,7 +80,7 @@ export function HeroGraphic() {
         />
         <motion.path
           d="M460 220 L460 250 M460 220 L432 226"
-          stroke="#FC8E01"
+          stroke="#22D3EE"
           strokeWidth="3"
           strokeLinecap="round"
           style={{ x: nearX, y: nearY }}
@@ -98,8 +98,8 @@ export function HeroGraphic() {
             <rect x="60" y="330" width="140" height="86" rx="14" fill="url(#cardFade)" stroke="#66768A" strokeOpacity="0.35" />
             <rect x="78" y="350" width="60" height="6" rx="3" fill="#A7B0BC" />
             <rect x="78" y="366" width="90" height="8" rx="4" fill="#FFFFFF" fillOpacity="0.85" />
-            <rect x="78" y="388" width="40" height="18" rx="4" fill="#04A5EF" fillOpacity="0.35" />
-            <rect x="126" y="378" width="40" height="28" rx="4" fill="#FC4C01" fillOpacity="0.55" />
+            <rect x="78" y="388" width="40" height="18" rx="4" fill="#8B2FEF" fillOpacity="0.35" />
+            <rect x="126" y="378" width="40" height="28" rx="4" fill="#0A4DF5" fillOpacity="0.55" />
           </motion.g>
         </motion.g>
 
@@ -113,7 +113,7 @@ export function HeroGraphic() {
             <rect x="368" y="320" width="70" height="6" rx="3" fill="#A7B0BC" />
             <rect x="368" y="336" width="100" height="8" rx="4" fill="#FFFFFF" fillOpacity="0.85" />
             <rect x="368" y="360" width="112" height="10" rx="5" fill="#11161D" />
-            <rect x="368" y="360" width="70" height="10" rx="5" fill="#04A5EF" />
+            <rect x="368" y="360" width="70" height="10" rx="5" fill="#8B2FEF" />
           </motion.g>
         </motion.g>
 
@@ -121,7 +121,7 @@ export function HeroGraphic() {
           cx="180"
           cy="130"
           r="5"
-          fill="#FC4C01"
+          fill="#0A4DF5"
           style={{ x: nearX, y: nearY }}
           animate={{ scale: [1, 1.4, 1] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
@@ -130,7 +130,7 @@ export function HeroGraphic() {
           cx="340"
           cy="90"
           r="5"
-          fill="#04A5EF"
+          fill="#8B2FEF"
           style={{ x: farX, y: farY }}
           animate={{ scale: [1, 1.4, 1] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
@@ -139,7 +139,7 @@ export function HeroGraphic() {
           cx="520"
           cy="260"
           r="4"
-          fill="#FC8E01"
+          fill="#22D3EE"
           style={{ x: nearX, y: nearY }}
           animate={{ scale: [1, 1.4, 1] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut", delay: 1.6 }}

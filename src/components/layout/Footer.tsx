@@ -13,8 +13,8 @@ export function Footer({ logoOnDark }: { logoOnDark?: string | null }) {
         <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
           <Logo tone="light" imgSrc={logoOnDark} />
           <p className="text-sm leading-relaxed text-white/60">
-            Acquisition digitale, suivi commercial et automatisation pour les entreprises du
-            bâtiment. {site.contact.area}.
+            Marketing digital, acquisition, suivi commercial et automatisation pour les TPE et
+            PME. {site.contact.area}.
           </p>
         </div>
 

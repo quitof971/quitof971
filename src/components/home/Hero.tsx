@@ -12,7 +12,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-black text-white">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_15%_10%,rgba(252,76,1,0.16),transparent),radial-gradient(50%_45%_at_90%_20%,rgba(4,165,239,0.14),transparent)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_15%_10%,rgba(10,77,245,0.18),transparent),radial-gradient(50%_45%_at_90%_20%,rgba(139,47,239,0.16),transparent)]"
       />
 
       <Container className="relative grid grid-cols-1 items-center gap-12 pb-20 pt-36 sm:pb-24 sm:pt-40 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:pb-32 lg:pt-48">
@@ -23,7 +23,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-orange-light"
           >
-            Acquisition digitale spécialisée BTP
+            Marketing digital, acquisition & automatisation
           </motion.span>
 
           <motion.h1
@@ -33,8 +33,8 @@ export function Hero() {
             className="font-heading font-semibold leading-[1.02] tracking-tight"
             style={{ fontSize: "clamp(2.4rem, 1.7rem + 3.2vw, 4.6rem)" }}
           >
-            Transformez les recherches Google en{" "}
-            <span className="text-orange">demandes de devis.</span>
+            Transformez votre visibilité en{" "}
+            <span className="text-orange">clients.</span>
           </motion.h1>
 
           <motion.p
@@ -43,8 +43,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="max-w-xl text-base leading-relaxed text-white/70 sm:text-lg"
           >
-            Google Ads, pages de destination, suivi des appels, CRM et relances : un système
-            complet, piloté pour vous, pour transformer vos clics en clients.
+            Google Ads, landing pages, tracking, CRM, relances, référencement local et
+            automatisation : nous mettons en place un système complet pour attirer de nouveaux
+            prospects, mieux les convertir et assurer leur suivi.
           </motion.p>
 
           <motion.div

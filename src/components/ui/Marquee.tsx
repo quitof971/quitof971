@@ -35,7 +35,7 @@ export function Marquee({ items, dual = false }: { items: string[]; dual?: boole
     <div
       className="group relative flex flex-col gap-3 overflow-hidden border-y border-white/10 bg-dark py-5"
       role="marquee"
-      aria-label="Expertises BTP Leads Pro"
+      aria-label="Expertises Cyberattract"
     >
       <MarqueeRow items={items} />
       {dual ? <MarqueeRow items={[...items].reverse()} reverse muted /> : null}

@@ -1,5 +1,5 @@
 export const legal = {
-  commercialName: "BTPleadsPro",
+  commercialName: "Cyberattract",
   entrepreneur: "Sacha Camurati",
   siren: "105 395 180",
   siret: "105 395 180 00018",
@@ -11,11 +11,11 @@ export const legal = {
     country: "France",
   },
   phone: "07 54 07 06 73",
-  email: "btpleadspro@gmail.com",
+  email: "contact@cyberattract.fr",
   toComplete: {
     directeurPublication: "À compléter",
     hebergeur: "À compléter",
-    nomDomaine: "À compléter",
+    nomDomaine: "cyberattract.fr",
     mediateur: "À compléter si nécessaire",
     tva: "À compléter si applicable",
   },

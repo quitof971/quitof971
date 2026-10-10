@@ -8,9 +8,9 @@ import { ConversionSection } from "@/components/home/ConversionSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/jsonld";
 
-const title = "Suivi des leads et conversion BTP";
+const title = "Suivi des leads et conversion";
 const description =
-  "Suivi des leads, scripts de relance et optimisation de la conversion pour ne plus perdre de demandes de devis dans le bâtiment.";
+  "Suivi des leads, scripts de relance et optimisation de la conversion pour ne plus perdre de prospects générés par vos campagnes.";
 
 export const metadata: Metadata = {
   title,
@@ -49,7 +49,7 @@ export default function SuiviConversionPage() {
           __html: JSON.stringify([
             breadcrumbJsonLd(breadcrumb),
             serviceJsonLd({
-              name: "Suivi et conversion des leads BTP",
+              name: "Suivi et conversion des prospects",
               description,
               url: "/suivi-conversion",
             }),

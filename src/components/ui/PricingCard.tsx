@@ -11,7 +11,7 @@ export function PricingCard({ offer, featured = false }: { offer: Offer; feature
     <TiltCard
       className={`relative flex flex-col gap-6 rounded-2xl border p-6 sm:p-8 ${
         featured
-          ? "border-orange bg-dark text-white shadow-[0_24px_60px_-24px_rgba(252,76,1,0.45)]"
+          ? "border-orange bg-dark text-white shadow-[0_24px_60px_-24px_rgba(10,77,245,0.45)]"
           : "border-border bg-white text-black"
       }`}
     >

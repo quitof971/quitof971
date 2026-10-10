@@ -1,10 +1,10 @@
-import { AlertTriangle, Gauge, UserX } from "lucide-react";
+import { AlertTriangle, Gauge, UserX, Bot } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { problems } from "@/content/services";
 
-const icons = [AlertTriangle, Gauge, UserX];
+const icons = [AlertTriangle, Gauge, UserX, Bot];
 
 export function ProblemSection() {
   return (
@@ -16,7 +16,7 @@ export function ProblemSection() {
           className="max-w-3xl"
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {problems.map((problem, index) => {
             const Icon = icons[index];
             return (
@@ -35,7 +35,7 @@ export function ProblemSection() {
 
         <Reveal delay={0.3}>
           <p className="mt-12 max-w-2xl text-lg font-medium text-black/85">
-            BTP Leads Pro relie acquisition, mesure et suivi commercial dans un système cohérent.
+            Cyberattract relie acquisition, conversion, suivi et automatisation dans un seul système cohérent.
           </p>
         </Reveal>
       </Container>

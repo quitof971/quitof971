@@ -9,7 +9,7 @@ import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 const title = "Contact";
 const description =
-  "Contactez BTP Leads Pro pour un diagnostic de votre acquisition digitale : téléphone, e-mail ou formulaire détaillé.";
+  "Contactez Cyberattract pour un diagnostic de votre acquisition digitale : téléphone, e-mail ou formulaire détaillé.";
 
 export const metadata: Metadata = {
   title,

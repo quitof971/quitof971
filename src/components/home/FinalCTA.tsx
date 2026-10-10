@@ -8,7 +8,7 @@ export function FinalCTA() {
     <section className="relative overflow-hidden bg-dark py-20 text-white sm:py-28">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(252,76,1,0.18),transparent)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(10,77,245,0.18),transparent)]"
       />
       <Container className="relative flex flex-col items-center gap-6 text-center">
         <h2

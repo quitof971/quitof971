@@ -4,8 +4,8 @@ import { useSyncExternalStore } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
-const STORAGE_KEY = "btp-leads-pro-cookie-consent";
-const CONSENT_EVENT = "btp-leads-pro-consent-change";
+const STORAGE_KEY = "cyberattract-cookie-consent";
+const CONSENT_EVENT = "cyberattract-consent-change";
 
 function subscribe(callback: () => void) {
   window.addEventListener("storage", callback);

@@ -1,4 +1,4 @@
-# BTP Leads Pro — routing for the Next.js static export on Apache/LiteSpeed (Hostinger).
+# Cyberattract — routing for the Next.js static export on Apache/LiteSpeed (Hostinger).
 #
 # `next build` with output:"export" writes both <route>.html and a
 # same-named <route>/ directory (client-navigation payload files, no
@@ -15,8 +15,8 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Force the apex domain (no www) so a single canonical hostname serves
 # the site.
-RewriteCond %{HTTP_HOST} ^www\.btpleadspro\.fr$ [NC]
-RewriteRule ^ https://btpleadspro.fr%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.cyberattract\.fr$ [NC]
+RewriteRule ^ https://cyberattract.fr%{REQUEST_URI} [L,R=301]
 
 # Serve the matching .html file for a clean URL even though a
 # same-named directory also exists.

@@ -108,8 +108,8 @@ export function CustomCursor() {
           width: ringSize,
           height: ringSize,
           scale: clicking ? 0.85 : 1,
-          borderColor: hovering ? "rgba(4,165,239,0.7)" : "rgba(252,76,1,0.55)",
-          backgroundColor: hovering ? "rgba(252,76,1,0.08)" : "rgba(252,76,1,0)",
+          borderColor: hovering ? "rgba(139,47,239,0.7)" : "rgba(10,77,245,0.55)",
+          backgroundColor: hovering ? "rgba(10,77,245,0.08)" : "rgba(10,77,245,0)",
         }}
         transition={{ duration: 0.18, ease: "easeOut" }}
         style={{ x: ringX, y: ringY, translateX: "-50%", translateY: "-50%" }}

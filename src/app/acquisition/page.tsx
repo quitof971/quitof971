@@ -11,21 +11,21 @@ import { FinalCTA } from "@/components/home/FinalCTA";
 import { acquisitionFeatureDetails } from "@/content/services";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/jsonld";
 
-const title = "Acquisition Google Ads pour le BTP";
+const title = "Acquisition digitale et Google Ads";
 const description =
-  "Campagnes Google Ads Search, pages de destination, tracking et CRM pour générer des demandes de devis qualifiées dans le bâtiment.";
+  "Campagnes Google Ads Search, landing pages, tracking et CRM pour générer des prospects qualifiés et attirer de nouveaux clients.";
 
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/acquisition-btp" },
-  openGraph: { title, description, url: "/acquisition-btp" },
+  alternates: { canonical: "/acquisition" },
+  openGraph: { title, description, url: "/acquisition" },
 };
 
-export default function AcquisitionBTPPage() {
+export default function AcquisitionPage() {
   const breadcrumb = [
     { label: "Accueil", href: "/" },
-    { label: "Acquisition BTP" },
+    { label: "Acquisition" },
   ];
 
   return (
@@ -37,18 +37,18 @@ export default function AcquisitionBTPPage() {
           __html: JSON.stringify([
             breadcrumbJsonLd(breadcrumb),
             serviceJsonLd({
-              name: "Acquisition digitale BTP",
+              name: "Acquisition digitale",
               description,
-              url: "/acquisition-btp",
+              url: "/acquisition",
             }),
           ]),
         }}
       />
 
       <PageHero
-        eyebrow="Pôle 01 — Acquisition BTP"
-        title="Générer des demandes de devis avec une structure conçue pour le bâtiment."
-        text="Campagnes Google Ads, pages de destination, tracking et CRM : un système pensé pour les recherches réelles de vos clients."
+        eyebrow="Pôle 01 — Acquisition digitale"
+        title="Générer des prospects avec une stratégie adaptée à votre activité."
+        text="Campagnes Google Ads, landing pages, tracking et CRM : un système construit autour de vos services les plus rentables, de votre marché et de votre zone commerciale."
         breadcrumb={breadcrumb}
       />
 

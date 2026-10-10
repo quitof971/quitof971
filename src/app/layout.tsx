@@ -82,7 +82,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const logo = resolvePublicAsset("btp-leads-pro-logo-transparent");
+  const logo = resolvePublicAsset("cyberattract-logo-transparent");
 
   return (
     <html lang="fr" className={`${sora.variable} ${inter.variable} h-full antialiased`}>

@@ -12,7 +12,7 @@ import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 const title = "Résultats Google Ads";
 const description =
-  "Comment BTP Leads Pro mesure les campagnes Google Ads : conversions, coûts, fréquence d'exposition, appels et formulaires.";
+  "Comment Cyberattract mesure les campagnes Google Ads : conversions, coûts, fréquence d'exposition, appels et formulaires.";
 
 export const metadata: Metadata = {
   title,

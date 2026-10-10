@@ -11,9 +11,9 @@ import { aiAgents } from "@/content/services";
 import { aiPacks, aiDisclaimers } from "@/content/offers";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/jsonld";
 
-const title = "Agents IA et automatisation pour le BTP";
+const title = "Agents IA et automatisation";
 const description =
-  "Agents IA téléphonique, commercial, marketing, SEO, comptable, juridique et recrutement pour automatiser les tâches répétitives du bâtiment.";
+  "Agents IA téléphonique, commercial, marketing, SEO, comptable, juridique et recrutement pour automatiser les tâches répétitives de votre entreprise.";
 
 export const metadata: Metadata = {
   title,
@@ -37,7 +37,7 @@ export default function IAAutomatisationPage() {
           __html: JSON.stringify([
             breadcrumbJsonLd(breadcrumb),
             serviceJsonLd({
-              name: "Agents IA et automatisation pour le BTP",
+              name: "Agents IA et automatisation",
               description,
               url: "/ia-automatisation",
             }),
@@ -55,7 +55,7 @@ export default function IAAutomatisationPage() {
       <section className="relative overflow-hidden bg-black py-20 text-white sm:py-28">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_15%_10%,rgba(4,165,239,0.18),transparent)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_15%_10%,rgba(139,47,239,0.18),transparent)]"
         />
         <Container className="relative">
           <SectionHeading eyebrow="Les familles d'agents" title="Huit agents, huit problèmes résolus." tone="light" />

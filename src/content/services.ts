@@ -1,26 +1,30 @@
 export const problems = [
   {
     title: "Pas assez de demandes",
-    text: "Votre entreprise dépend encore trop du bouche-à-oreille ou de périodes irrégulières.",
+    text: "Votre entreprise dépend encore trop du bouche-à-oreille, des recommandations ou de périodes d'activité irrégulières.",
   },
   {
-    title: "Un budget difficile à mesurer",
-    text: "Les appels, formulaires et résultats ne sont pas toujours correctement suivis.",
+    title: "Un budget marketing difficile à mesurer",
+    text: "Vous investissez dans votre communication ou votre publicité sans toujours savoir précisément combien de prospects et de clients sont réellement générés.",
   },
   {
     title: "Des prospects oubliés",
-    text: "Une demande non rappelée ou un devis non relancé peut rapidement être perdu.",
+    text: "Un appel non traité, une demande non rappelée, un rendez-vous non confirmé ou un devis non relancé peut rapidement devenir une vente perdue.",
+  },
+  {
+    title: "Trop de tâches manuelles",
+    text: "Vos équipes consacrent du temps à répondre, qualifier, organiser, relancer ou saisir des informations qui pourraient être automatisées.",
   },
 ];
 
 export const acquisitionFeatures = [
   "Google Ads Search",
-  "Pages de destination",
+  "Landing pages",
   "Mots-clés et annonces",
   "Ciblage géographique",
   "Appels et formulaires",
-  "Tracking",
-  "CRM simple",
+  "Tracking des conversions",
+  "CRM / pipeline commercial",
   "Reporting",
   "Optimisation",
   "Visibilité locale",
@@ -37,28 +41,28 @@ export const acquisitionFeatureDetails: AcquisitionFeatureDetail[] = [
     text: "Des campagnes construites sur les recherches réelles de vos futurs clients, service par service.",
   },
   {
-    title: "Pages de destination",
-    text: "Une page dédiée par service, pensée pour donner envie de demander un devis.",
+    title: "Landing pages",
+    text: "Une page dédiée par service ou par offre, pensée pour donner envie de passer à l'action.",
   },
   {
     title: "Mots-clés et annonces",
-    text: "Une sélection de mots-clés pertinents et des annonces qui correspondent à vos services.",
+    text: "Une sélection de mots-clés pertinents, des mots-clés négatifs et des annonces qui correspondent à vos offres.",
   },
   {
     title: "Ciblage géographique",
-    text: "Une diffusion limitée à votre zone d'intervention réelle, pour éviter le budget perdu.",
+    text: "Une diffusion limitée à votre zone commerciale réelle, pour éviter le budget perdu.",
   },
   {
     title: "Appels et formulaires",
     text: "Un bouton d'appel et un formulaire visibles, adaptés au mobile comme au bureau.",
   },
   {
-    title: "Tracking",
+    title: "Tracking des conversions",
     text: "Un suivi des appels et des formulaires pour savoir d'où viennent réellement les demandes.",
   },
   {
-    title: "CRM simple",
-    text: "Un espace pour centraliser les prospects, sans usine à gaz à apprendre.",
+    title: "CRM / pipeline commercial",
+    text: "Un espace pour centraliser les prospects et suivre leur statut, sans usine à gaz à apprendre.",
   },
   {
     title: "Reporting",
@@ -66,7 +70,7 @@ export const acquisitionFeatureDetails: AcquisitionFeatureDetail[] = [
   },
   {
     title: "Optimisation",
-    text: "Des ajustements continus sur les mots-clés, les annonces et les pages.",
+    text: "Des ajustements continus sur les mots-clés, les annonces et les landing pages.",
   },
   {
     title: "Visibilité locale",
@@ -78,27 +82,27 @@ export const methodSteps = [
   {
     number: "01",
     title: "Diagnostic",
-    text: "Comprendre vos services rentables, votre zone, votre capacité de traitement et vos objectifs.",
+    text: "Comprendre vos offres les plus rentables, vos clients, votre marché, votre concurrence, votre capacité de traitement et vos objectifs commerciaux.",
   },
   {
     number: "02",
     title: "Acquisition",
-    text: "Créer les campagnes, les annonces et les pages adaptées aux recherches de vos prospects.",
+    text: "Créer les campagnes, les annonces et les landing pages adaptées aux recherches de vos prospects.",
   },
   {
     number: "03",
     title: "Mesure",
-    text: "Suivre les appels, formulaires et sources des demandes.",
+    text: "Suivre les appels, les formulaires, les conversions et les sources des demandes.",
   },
   {
     number: "04",
     title: "Suivi",
-    text: "Organiser les prospects, les rappels et les relances.",
+    text: "Organiser les prospects, les rappels, les rendez-vous, les propositions et les relances.",
   },
   {
     number: "05",
     title: "Optimisation",
-    text: "Analyser les données et améliorer progressivement les campagnes et la conversion.",
+    text: "Analyser les résultats et améliorer progressivement les campagnes, le coût d'acquisition, les landing pages, la qualité des prospects et la conversion commerciale.",
   },
 ];
 
@@ -112,42 +116,42 @@ export const aiAgents: AIAgent[] = [
   {
     id: "telephonique",
     name: "Agent Téléphonique",
-    problem: "Récupérer les informations essentielles lorsqu'un prospect appelle.",
+    problem: "Appels manqués, temps passé au téléphone et demandes insuffisamment qualifiées.",
   },
   {
     id: "commercial",
     name: "Agent Commercial",
-    problem: "Qualifier les demandes, préparer les relances et suivre les devis.",
+    problem: "Prospects oubliés, devis non relancés et suivi commercial irrégulier.",
   },
   {
     id: "general",
     name: "Agent Général",
-    problem: "Centraliser les demandes et préparer les tâches à traiter.",
+    problem: "Informations dispersées, tâches répétitives et perte de temps organisationnelle.",
   },
   {
     id: "marketing",
     name: "Agent Marketing",
-    problem: "Transformer les photos de chantiers en publications et contenus.",
+    problem: "L'entreprise a beaucoup à montrer mais manque de temps pour communiquer régulièrement.",
   },
   {
     id: "seo",
     name: "Agent SEO",
-    problem: "Suivre la visibilité locale et proposer des améliorations de contenu.",
+    problem: "Référencement peu suivi et manque de régularité dans l'amélioration des contenus.",
   },
   {
     id: "comptable",
-    name: "Agent Comptable",
-    problem: "Organiser et préparer les informations administratives courantes.",
+    name: "Agent Comptable / Administratif",
+    problem: "Temps administratif important et informations dispersées.",
   },
   {
     id: "juridique",
     name: "Agent Juridique",
-    problem: "Aider à la rédaction, à la synthèse et au classement des documents.",
+    problem: "Temps consacré à la rédaction, à la synthèse et à l'organisation documentaire.",
   },
   {
     id: "recrutement",
     name: "Agent Recrutement",
-    problem: "Centraliser les candidatures et préparer les premiers échanges.",
+    problem: "Candidatures dispersées et temps perdu sur les premières étapes du recrutement.",
   },
 ];
 

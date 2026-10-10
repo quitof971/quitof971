@@ -23,7 +23,7 @@ export function PageHero({
     <section className="relative overflow-hidden bg-black pb-16 pt-36 text-white sm:pb-20 sm:pt-40">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_40%_at_85%_0%,rgba(4,165,239,0.16),transparent),radial-gradient(45%_35%_at_10%_100%,rgba(252,76,1,0.14),transparent)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_40%_at_85%_0%,rgba(139,47,239,0.16),transparent),radial-gradient(45%_35%_at_10%_100%,rgba(10,77,245,0.14),transparent)]"
       />
       <Container className="relative flex flex-col gap-6">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>

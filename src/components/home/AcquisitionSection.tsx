@@ -14,8 +14,8 @@ export function AcquisitionSection() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_0.85fr] lg:gap-16">
           <div className="flex flex-col gap-8">
             <SectionHeading
-              eyebrow="Pôle 01 — Acquisition BTP"
-              title="Générer des demandes de devis avec une structure conçue pour le bâtiment."
+              eyebrow="Pôle 01 — Acquisition digitale"
+              title="Générer des prospects avec une stratégie adaptée à votre activité."
             />
 
             <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3">
@@ -27,7 +27,7 @@ export function AcquisitionSection() {
               ))}
             </ul>
 
-            <Button href="/acquisition-btp" variant="secondary" className="w-fit" icon={<ArrowRight className="h-4 w-4" aria-hidden="true" />}>
+            <Button href="/acquisition" variant="secondary" className="w-fit" icon={<ArrowRight className="h-4 w-4" aria-hidden="true" />}>
               Voir le détail du pôle Acquisition
             </Button>
           </div>

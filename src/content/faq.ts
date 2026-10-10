@@ -5,19 +5,19 @@ export type FaqItem = {
 
 export const faqItems: FaqItem[] = [
   {
-    question: "À quelles entreprises s'adresse BTP Leads Pro ?",
+    question: "À quelles entreprises s'adresse Cyberattract ?",
     answer:
-      "BTP Leads Pro s'adresse aux couvreurs, façadiers, entreprises de ravalement, de rénovation, aux maçons et plus largement aux PME du bâtiment qui souhaitent structurer leur acquisition de demandes de devis, en France entière.",
+      "Cyberattract s'adresse aux TPE, PME et entreprises de services qui souhaitent structurer leur acquisition de prospects, améliorer leur suivi commercial et automatiser certaines tâches, en France entière.",
   },
   {
     question: "Le budget Google Ads est-il compris dans les tarifs ?",
     answer:
-      "Non. Le budget publicitaire est réglé directement à la plateforme publicitaire (Google Ads) et n'est pas inclus dans les honoraires de BTP Leads Pro.",
+      "Non. Le budget publicitaire est réglé directement à la plateforme publicitaire (Google Ads) et n'est pas inclus dans les honoraires de Cyberattract.",
   },
   {
     question: "Faut-il déjà avoir un site internet ?",
     answer:
-      "Non. Une page de destination dédiée peut être créée pour chaque service, indépendamment de votre site actuel.",
+      "Non. Une landing page dédiée peut être créée pour chaque service ou offre, indépendamment de votre site actuel.",
   },
   {
     question: "Comment les appels et formulaires sont-ils suivis ?",

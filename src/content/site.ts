@@ -1,26 +1,26 @@
 export const site = {
   brand: {
-    name: "BTP Leads Pro",
-    legalName: "BTPleadsPro",
-    tagline: "Leads qualifiés pour toiture & façade",
+    name: "Cyberattract",
+    legalName: "Cyberattract",
+    tagline: "Marketing digital, acquisition, suivi commercial & automatisation",
   },
   contact: {
     phoneDisplay: "07 54 07 06 73",
     phoneHref: "tel:+33754070673",
-    email: "btpleadspro@gmail.com",
-    emailHref: "mailto:btpleadspro@gmail.com",
+    email: "contact@cyberattract.fr",
+    emailHref: "mailto:contact@cyberattract.fr",
     hours: "Du lundi au vendredi, de 9 h à 20 h",
     hoursShort: "Lun–Ven · 9 h–20 h",
     area: "France entière",
   },
   seo: {
-    titleDefault: "BTP Leads Pro | Google Ads et acquisition digitale pour le BTP",
+    titleDefault: "Cyberattract | Marketing digital, acquisition et automatisation",
     descriptionDefault:
-      "BTP Leads Pro accompagne les entreprises du bâtiment avec Google Ads, des landing pages, le suivi des prospects, les relances et l'automatisation.",
-    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://btpleadspro.fr",
+      "Cyberattract met en place un système complet pour attirer des prospects, mieux les convertir et assurer leur suivi : Google Ads, landing pages, tracking, CRM, relances, référencement local et automatisation.",
+    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://cyberattract.fr",
   },
   nav: [
-    { label: "Services", href: "/acquisition-btp" },
+    { label: "Acquisition", href: "/acquisition" },
     { label: "Offres", href: "/offres" },
     { label: "Méthode", href: "/#methode" },
     { label: "Résultats", href: "/resultats" },
@@ -29,7 +29,7 @@ export const site = {
     { label: "Contact", href: "/contact" },
   ],
   footerServices: [
-    { label: "Acquisition BTP", href: "/acquisition-btp" },
+    { label: "Acquisition digitale", href: "/acquisition" },
     { label: "Suivi & conversion", href: "/suivi-conversion" },
     { label: "IA & automatisation", href: "/ia-automatisation" },
     { label: "Offres & tarifs", href: "/offres" },
@@ -45,18 +45,16 @@ export const site = {
 } as const;
 
 export const targets = [
-  "Couvreurs",
-  "Entreprises de toiture",
-  "Façadiers",
-  "Entreprises de ravalement",
-  "Entreprises de rénovation",
-  "Maçons",
-  "Entreprises du patrimoine",
-  "PME du bâtiment",
+  "TPE de services",
+  "PME de services",
+  "Entreprises locales",
+  "Entreprises à panier moyen élevé",
+  "Entreprises avec plusieurs offres",
+  "Entreprises souhaitant automatiser leur suivi",
 ];
 
 export const expertiseMarquee = [
-  "Google Ads Search",
+  "Google Ads",
   "Landing pages",
   "Tracking",
   "CRM",

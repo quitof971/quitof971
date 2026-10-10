@@ -8,7 +8,7 @@ export function isEmailConfigured(): boolean {
 export async function sendContactEmail(data: ContactFormValues) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.CONTACT_FROM_EMAIL;
-  const to = process.env.CONTACT_TO_EMAIL || "btpleadspro@gmail.com";
+  const to = process.env.CONTACT_TO_EMAIL || "contact@cyberattract.fr";
 
   if (!apiKey || !from) {
     throw new Error("EMAIL_NOT_CONFIGURED");
@@ -30,7 +30,7 @@ export async function sendContactEmail(data: ContactFormValues) {
   ];
 
   const html = `
-    <h2>Nouvelle demande de diagnostic — BTP Leads Pro</h2>
+    <h2>Nouvelle demande de diagnostic — Cyberattract</h2>
     <table cellpadding="6" cellspacing="0" style="border-collapse:collapse">
       ${rows
         .map(

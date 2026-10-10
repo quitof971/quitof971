@@ -23,9 +23,9 @@ import {
 } from "@/content/offers";
 import { breadcrumbJsonLd, faqJsonLd } from "@/lib/jsonld";
 
-const title = "Offres Google Ads pour entreprises du bâtiment";
+const title = "Offres marketing digital et acquisition";
 const description =
-  "Tarifs des offres Pilote, Standard et Pack RDV Premium, des options de suivi & conversion et des packs IA pour les entreprises du bâtiment.";
+  "Tarifs des offres Pilote, Standard et Pack RDV Premium, des options de suivi & conversion et des packs IA pour les TPE et PME.";
 
 export const metadata: Metadata = {
   title,
@@ -52,8 +52,8 @@ export default function OffresPage() {
 
       <PageHero
         eyebrow="Offres"
-        title="Des offres claires, pensées pour le bâtiment."
-        text="Acquisition de demandes de devis, suivi commercial et automatisation : chaque offre précise son contenu et son tarif."
+        title="Des offres claires, adaptées à votre activité."
+        text="Acquisition de prospects, suivi commercial et automatisation : chaque offre précise son contenu et son tarif."
         breadcrumb={breadcrumb}
       />
 

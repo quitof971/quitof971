@@ -4,7 +4,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { legal } from "@/content/legal";
 
 const title = "Mentions légales";
-const description = "Mentions légales de BTPleadsPro, éditeur du site BTP Leads Pro.";
+const description = "Mentions légales de Cyberattract, éditeur du site Cyberattract.";
 
 export const metadata: Metadata = {
   title,

@@ -167,7 +167,7 @@ export function ContactForm() {
         <Field label="Entreprise" name="company" autoComplete="organization" error={errors.company} required />
         <Field label="Téléphone" name="phone" type="tel" autoComplete="tel" error={errors.phone} required />
         <Field label="E-mail" name="email" type="email" autoComplete="email" error={errors.email} required className="sm:col-span-2" />
-        <Field label="Métier" name="trade" placeholder="Ex. couvreur, façadier, maçon..." error={errors.trade} required />
+        <Field label="Métier" name="trade" placeholder="Ex. plombier, consultant, agence immobilière..." error={errors.trade} required />
         <Field label="Zone d'intervention" name="area" placeholder="Ex. Occitanie, 30 km autour de..." error={errors.area} required />
 
         <SelectField

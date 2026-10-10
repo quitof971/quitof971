@@ -10,7 +10,7 @@ import { breadcrumbJsonLd } from "@/lib/jsonld";
 
 const title = "À propos";
 const description =
-  "BTP Leads Pro est une structure spécialisée dans l'acquisition digitale et le suivi commercial pour les entreprises du bâtiment.";
+  "Cyberattract est une structure spécialisée dans l'acquisition digitale, le suivi commercial et l'automatisation pour les TPE et PME.";
 
 export const metadata: Metadata = {
   title,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 const values = [
   { icon: Crosshair, title: "Clarté", text: "Des offres et des tarifs présentés sans jargon, pour être compris rapidement." },
-  { icon: Compass, title: "Spécialisation BTP", text: "Une approche centrée sur les services et les recherches propres au bâtiment." },
+  { icon: Compass, title: "Stratégie sur-mesure", text: "Une approche adaptée au secteur, au marché, au panier moyen et à la zone commerciale de chaque entreprise." },
   { icon: Gauge, title: "Mesure", text: "Des campagnes suivies à partir de données concrètes, pas de promesses en l'air." },
   { icon: ListChecks, title: "Suivi", text: "Des prospects organisés pour éviter les demandes oubliées." },
   { icon: Timer, title: "Réactivité", text: "Des ajustements réguliers plutôt qu'un pilotage automatique figé." },
@@ -44,7 +44,7 @@ export default function AProposPage() {
 
       <PageHero
         eyebrow="À propos"
-        title="Une structure spécialisée dans l'acquisition digitale du bâtiment."
+        title="Une structure spécialisée dans l'acquisition digitale, la conversion et l'automatisation."
         breadcrumb={breadcrumb}
       />
 
@@ -52,10 +52,10 @@ export default function AProposPage() {
         <Container>
           <Reveal>
             <p className="max-w-3xl text-lg leading-relaxed text-black/85 sm:text-xl">
-              BTP Leads Pro est une structure spécialisée dans l&apos;acquisition digitale et le
-              suivi commercial pour les entreprises du bâtiment. Son objectif est de rendre les
-              campagnes plus lisibles, les demandes plus faciles à suivre et les actions
-              commerciales plus structurées.
+              Cyberattract est une structure spécialisée dans l&apos;acquisition digitale, le
+              suivi commercial et l&apos;automatisation pour les TPE, PME et entreprises de
+              services. Son objectif est de rendre les campagnes plus lisibles, les demandes plus
+              faciles à suivre et les actions commerciales plus structurées.
             </p>
           </Reveal>
         </Container>

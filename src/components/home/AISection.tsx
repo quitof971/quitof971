@@ -10,7 +10,7 @@ export function AISection() {
     <section className="relative overflow-hidden bg-black py-20 text-white sm:py-28">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_85%_15%,rgba(4,165,239,0.22),transparent)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_85%_15%,rgba(139,47,239,0.22),transparent)]"
       />
       <Container className="relative">
         <SectionHeading

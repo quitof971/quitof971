@@ -5,7 +5,7 @@ import { legal } from "@/content/legal";
 import { site } from "@/content/site";
 
 const title = "Politique de confidentialité";
-const description = "Comment BTP Leads Pro collecte, utilise et protège les données transmises via le formulaire de contact.";
+const description = "Comment Cyberattract collecte, utilise et protège les données transmises via le formulaire de contact.";
 
 export const metadata: Metadata = {
   title,

@@ -24,11 +24,11 @@ export function Header({ logoSrc }: { logoSrc?: string | null }) {
       <div
         className={`mx-auto flex w-[94%] max-w-[1240px] items-center justify-between gap-4 rounded-[28px] border px-5 transition-all duration-300 sm:px-7 ${
           scrolled
-            ? "border-[rgba(255,140,60,0.5)] bg-[rgba(9,7,6,0.86)] py-3 shadow-[0_10px_36px_-12px_rgba(252,76,1,0.5)] backdrop-blur-xl"
-            : "border-[rgba(255,140,60,0.35)] bg-[rgba(9,7,6,0.7)] py-4 shadow-[0_8px_28px_-14px_rgba(252,76,1,0.4)] backdrop-blur-lg"
+            ? "border-[rgba(60,110,255,0.5)] bg-[rgba(9,7,6,0.86)] py-3 shadow-[0_10px_36px_-12px_rgba(10,77,245,0.5)] backdrop-blur-xl"
+            : "border-[rgba(60,110,255,0.35)] bg-[rgba(9,7,6,0.7)] py-4 shadow-[0_8px_28px_-14px_rgba(10,77,245,0.4)] backdrop-blur-lg"
         }`}
       >
-        <Link href="/" aria-label="BTP Leads Pro — Accueil" className="shrink-0">
+        <Link href="/" aria-label="Cyberattract — Accueil" className="shrink-0">
           <Logo tone="light" imgSrc={logoSrc} />
         </Link>
 

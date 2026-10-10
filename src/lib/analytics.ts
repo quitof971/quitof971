@@ -14,7 +14,7 @@ declare global {
 
 export function hasAnalyticsConsent(): boolean {
   if (typeof window === "undefined") return false;
-  return window.localStorage.getItem("btp-leads-pro-cookie-consent") === "accepted";
+  return window.localStorage.getItem("cyberattract-cookie-consent") === "accepted";
 }
 
 export function trackEvent(event: AnalyticsEvent, params: Record<string, string> = {}) {
