@@ -5,6 +5,7 @@ export const serviceOptions = [
   "Offre Standard",
   "Pack RDV Premium",
   "Croissance locale",
+  "Site internet",
   "Suivi des leads",
   "Optimisation conversion",
   "IA et automatisation",

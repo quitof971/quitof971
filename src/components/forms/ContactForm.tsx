@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { site } from "@/content/site";
@@ -12,9 +12,16 @@ import {
 } from "@/lib/validation";
 
 function readDefaultServiceFromUrl(): string | undefined {
-  if (typeof window === "undefined") return undefined;
   const offre = new URLSearchParams(window.location.search).get("offre");
   return offre && (serviceOptions as readonly string[]).includes(offre) ? offre : undefined;
+}
+
+function subscribeToNothing() {
+  return () => {};
+}
+
+function getServerDefaultService(): string | undefined {
+  return undefined;
 }
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -41,7 +48,16 @@ function buildMailtoLink(data: ContactFormValues) {
 }
 
 export function ContactForm() {
-  const [defaultService] = useState<string | undefined>(readDefaultServiceFromUrl);
+  // Static export prerenders this form with no access to the URL, so the
+  // service field's default option can only be resolved once hydrated on
+  // the client; useSyncExternalStore keeps that SSR/client mismatch safe.
+  // The select is then remounted via `key` once it's known, since React
+  // only applies `defaultValue` to an uncontrolled <select> at creation.
+  const defaultService = useSyncExternalStore(
+    subscribeToNothing,
+    readDefaultServiceFromUrl,
+    getServerDefaultService
+  );
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [serverMessage, setServerMessage] = useState<string | null>(null);
@@ -322,6 +338,7 @@ function SelectField({
         {label} {required ? <span className="text-orange">*</span> : null}
       </label>
       <select
+        key={defaultValue ?? "empty"}
         id={name}
         name={name}
         defaultValue={defaultValue && options.includes(defaultValue) ? defaultValue : ""}

@@ -21,6 +21,7 @@ export const site = {
   },
   nav: [
     { label: "Acquisition", href: "/acquisition" },
+    { label: "Sites Internet", href: "/sites-internet" },
     { label: "Offres", href: "/offres" },
     { label: "Méthode", href: "/#methode" },
     { label: "Résultats", href: "/resultats" },
@@ -30,6 +31,7 @@ export const site = {
   ],
   footerServices: [
     { label: "Acquisition digitale", href: "/acquisition" },
+    { label: "Sites Internet", href: "/sites-internet" },
     { label: "Suivi & conversion", href: "/suivi-conversion" },
     { label: "IA & automatisation", href: "/ia-automatisation" },
     { label: "Offres & tarifs", href: "/offres" },
