@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Button } from "@/components/ui/Button";
 import { methodSteps } from "@/content/services";
 
 export function MethodSection() {
@@ -14,7 +16,7 @@ export function MethodSection() {
       <Container>
         <SectionHeading
           eyebrow="Méthode"
-          title="Une méthode claire, du clic au suivi du devis."
+          title="Une méthode claire, quel que soit votre projet."
           tone="light"
         />
 
@@ -83,6 +85,18 @@ export function MethodSection() {
               <p className="mt-2 text-sm leading-relaxed text-white/70">{step.text}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center lg:justify-start">
+          <Button
+            href="/offres"
+            variant="ghost"
+            size="md"
+            className="text-white/80 hover:text-white"
+            icon={<ArrowRight className="h-4 w-4" aria-hidden="true" />}
+          >
+            Découvrir nos offres
+          </Button>
         </div>
       </Container>
     </section>

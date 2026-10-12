@@ -1,3 +1,22 @@
+export type NavLink = { label: string; href: string };
+export type NavItem = NavLink | { label: string; links: NavLink[] };
+
+const nav: NavItem[] = [
+  { label: "Acquisition", href: "/acquisition" },
+  {
+    label: "Nos services",
+    links: [
+      { label: "Sites internet", href: "/sites-internet" },
+      { label: "Offres", href: "/offres" },
+    ],
+  },
+  { label: "Méthode", href: "/#methode" },
+  { label: "Résultats", href: "/resultats" },
+  { label: "IA & automatisation", href: "/ia-automatisation" },
+  { label: "À propos", href: "/a-propos" },
+  { label: "Contact", href: "/contact" },
+];
+
 export const site = {
   brand: {
     name: "Cyberattract",
@@ -19,16 +38,7 @@ export const site = {
       "Cyberattract met en place un système complet pour attirer des prospects, mieux les convertir et assurer leur suivi : Google Ads, landing pages, tracking, CRM, relances, référencement local et automatisation.",
     siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://cyberattract.fr",
   },
-  nav: [
-    { label: "Acquisition", href: "/acquisition" },
-    { label: "Sites Internet", href: "/sites-internet" },
-    { label: "Offres", href: "/offres" },
-    { label: "Méthode", href: "/#methode" },
-    { label: "Résultats", href: "/resultats" },
-    { label: "IA & automatisation", href: "/ia-automatisation" },
-    { label: "À propos", href: "/a-propos" },
-    { label: "Contact", href: "/contact" },
-  ],
+  nav,
   footerServices: [
     { label: "Acquisition digitale", href: "/acquisition" },
     { label: "Sites Internet", href: "/sites-internet" },

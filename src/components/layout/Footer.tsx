@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 
 export function Footer({ logoOnDark }: { logoOnDark?: string | null }) {
   const year = new Date().getFullYear();
+  const footerNavLinks = site.nav.flatMap((item) => ("links" in item ? item.links : [item]));
 
   return (
     <footer className="border-t border-white/10 bg-black text-white">
@@ -23,7 +24,7 @@ export function Footer({ logoOnDark }: { logoOnDark?: string | null }) {
             Navigation
           </h2>
           <ul className="flex flex-col gap-2.5">
-            {site.nav.map((item) => (
+            {footerNavLinks.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="text-sm text-white/75 hover:text-white">
                   {item.label}

@@ -7,6 +7,7 @@ import { site } from "@/content/site";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
 import { MobileNav } from "./MobileNav";
+import { NavDropdown } from "./NavDropdown";
 
 export function Header({ logoSrc }: { logoSrc?: string | null }) {
   const [scrolled, setScrolled] = useState(false);
@@ -33,15 +34,19 @@ export function Header({ logoSrc }: { logoSrc?: string | null }) {
         </Link>
 
         <nav aria-label="Navigation principale" className="hidden items-center gap-5 xl:flex">
-          {site.nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="whitespace-nowrap text-base font-medium text-white/85 transition-colors hover:text-white"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {site.nav.map((item) =>
+            "links" in item ? (
+              <NavDropdown key={item.label} label={item.label} links={item.links} />
+            ) : (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="whitespace-nowrap text-base font-medium text-white/85 transition-colors hover:text-white"
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
 
         <div className="flex shrink-0 items-center gap-3">

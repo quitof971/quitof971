@@ -81,28 +81,23 @@ export const acquisitionFeatureDetails: AcquisitionFeatureDetail[] = [
 export const methodSteps = [
   {
     number: "01",
-    title: "Diagnostic",
-    text: "Comprendre vos offres les plus rentables, vos clients, votre marché, votre concurrence, votre capacité de traitement et vos objectifs commerciaux.",
+    title: "Analyse",
+    text: "Comprendre l'entreprise, ses besoins et ses objectifs.",
   },
   {
     number: "02",
-    title: "Acquisition",
-    text: "Créer les campagnes, les annonces et les landing pages adaptées aux recherches de vos prospects.",
+    title: "Stratégie",
+    text: "Définir les actions marketing les plus pertinentes.",
   },
   {
     number: "03",
-    title: "Mesure",
-    text: "Suivre les appels, les formulaires, les conversions et les sources des demandes.",
+    title: "Déploiement",
+    text: "Mettre en place les solutions adaptées.",
   },
   {
     number: "04",
-    title: "Suivi",
-    text: "Organiser les prospects, les rappels, les rendez-vous, les propositions et les relances.",
-  },
-  {
-    number: "05",
     title: "Optimisation",
-    text: "Analyser les résultats et améliorer progressivement les campagnes, le coût d'acquisition, les landing pages, la qualité des prospects et la conversion commerciale.",
+    text: "Mesurer les résultats et améliorer les performances.",
   },
 ];
 

@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { Phone, X } from "lucide-react";
-import { site } from "@/content/site";
+import { ChevronDown, Phone, X } from "lucide-react";
+import { site, type NavLink } from "@/content/site";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
 
@@ -51,16 +52,20 @@ export function MobileNav({
       </div>
 
       <nav aria-label="Navigation principale" className="flex flex-1 flex-col gap-1 overflow-y-auto px-5 py-6">
-        {site.nav.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            onClick={onClose}
-            className="border-b border-white/10 py-4 font-heading text-2xl font-semibold"
-          >
-            {item.label}
-          </Link>
-        ))}
+        {site.nav.map((item) =>
+          "links" in item ? (
+            <MobileNavAccordion key={item.label} label={item.label} links={item.links} onNavigate={onClose} />
+          ) : (
+            <Link
+              key={item.label}
+              href={item.href}
+              onClick={onClose}
+              className="border-b border-white/10 py-4 font-heading text-2xl font-semibold"
+            >
+              {item.label}
+            </Link>
+          )
+        )}
       </nav>
 
       <div className="flex flex-col gap-3 border-t border-white/10 px-5 py-6">
@@ -79,5 +84,58 @@ export function MobileNav({
       </div>
     </div>,
     document.body
+  );
+}
+
+function MobileNavAccordion({
+  label,
+  links,
+  onNavigate,
+}: {
+  label: string;
+  links: NavLink[];
+  onNavigate: () => void;
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="border-b border-white/10">
+      <button
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between py-4 font-heading text-2xl font-semibold"
+      >
+        {label}
+        <ChevronDown
+          className={`h-5 w-5 shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          aria-hidden="true"
+        />
+      </button>
+      <AnimatePresence initial={false}>
+        {open ? (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <div className="flex flex-col gap-1 pb-4 pl-4">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={onNavigate}
+                  className="rounded-lg py-2.5 text-lg font-medium text-white/75 transition-colors hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+    </div>
   );
 }
