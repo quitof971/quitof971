@@ -25,7 +25,7 @@ import { breadcrumbJsonLd, faqJsonLd } from "@/lib/jsonld";
 
 const title = "Offres marketing digital et acquisition";
 const description =
-  "Tarifs des offres Pilote, Standard et Pack RDV Premium, des options de suivi & conversion et des packs IA pour les TPE et PME.";
+  "Tarifs des offres Pilote, Standard et Offre Premium, des options de suivi & conversion et des packs IA pour les TPE et PME.";
 
 export const metadata: Metadata = {
   title,

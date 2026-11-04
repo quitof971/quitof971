@@ -6,8 +6,8 @@ const nav: NavItem[] = [
   {
     label: "Nos services",
     links: [
-      { label: "Sites internet", href: "/sites-internet" },
-      { label: "Offres", href: "/offres" },
+      { label: "Création de sites internet", href: "/sites-internet" },
+      { label: "Nos offres", href: "/offres" },
     ],
   },
   { label: "Méthode", href: "/#methode" },
@@ -40,8 +40,8 @@ export const site = {
   },
   nav,
   footerServices: [
+    { label: "Création de sites internet", href: "/sites-internet" },
     { label: "Acquisition digitale", href: "/acquisition" },
-    { label: "Sites Internet", href: "/sites-internet" },
     { label: "Suivi & conversion", href: "/suivi-conversion" },
     { label: "IA & automatisation", href: "/ia-automatisation" },
     { label: "Offres & tarifs", href: "/offres" },

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Hero } from "@/components/home/Hero";
 import { ExpertiseMarquee } from "@/components/home/ExpertiseMarquee";
+import { WebsiteShowcaseSection } from "@/components/home/WebsiteShowcaseSection";
 import { ProblemSection } from "@/components/home/ProblemSection";
 import { AcquisitionSection } from "@/components/home/AcquisitionSection";
 import { MethodSection } from "@/components/home/MethodSection";
@@ -33,6 +34,7 @@ export default function HomePage() {
       <Hero />
       <ExpertiseMarquee />
       <ProblemSection />
+      <WebsiteShowcaseSection />
       <AcquisitionSection />
       <MethodSection />
       <PricingSection />

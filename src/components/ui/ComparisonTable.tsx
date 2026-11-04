@@ -32,7 +32,7 @@ export function ComparisonTable({ rows }: { rows: ComparisonRow[] }) {
             </th>
             <th scope="col" className="px-5 py-4 text-left font-heading text-sm font-semibold text-black">Offre Pilote</th>
             <th scope="col" className="px-5 py-4 text-left font-heading text-sm font-semibold text-orange">Offre Standard</th>
-            <th scope="col" className="px-5 py-4 text-left font-heading text-sm font-semibold text-black">Pack RDV Premium</th>
+            <th scope="col" className="px-5 py-4 text-left font-heading text-sm font-semibold text-black">Offre Premium</th>
           </tr>
         </thead>
         <tbody>

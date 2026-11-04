@@ -3,7 +3,7 @@ import { z } from "zod";
 export const serviceOptions = [
   "Offre Pilote",
   "Offre Standard",
-  "Pack RDV Premium",
+  "Offre Premium",
   "Croissance locale",
   "Site internet",
   "Suivi des leads",

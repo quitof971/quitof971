@@ -1,90 +1,134 @@
-export type WebsiteOffer = {
+export type WebsiteSolution = {
   id: string;
   name: string;
-  price: string;
-  description?: string;
-  features?: string[];
+  description: string;
+  advantages: string[];
 };
 
-export const websiteOffers: WebsiteOffer[] = [
+export const websiteSolutions: WebsiteSolution[] = [
   {
-    id: "landing-page",
-    name: "Landing Page",
-    price: "À partir de 490 € HT",
-    features: [
-      "1 page",
-      "Design professionnel",
-      "Formulaire de contact",
-      "Responsive",
-      "Tracking",
-      "Optimisation conversion",
+    id: "vitrine",
+    name: "Site vitrine",
+    description:
+      "Une présentation claire de votre entreprise, de vos services et de vos coordonnées, pensée pour inspirer confiance dès la première visite.",
+    advantages: [
+      "Mise en avant de votre activité et de votre savoir-faire",
+      "Formulaire et coordonnées facilement accessibles",
+      "Design adapté à votre image de marque",
+      "Mise en ligne rapide",
     ],
   },
   {
-    id: "one-page",
-    name: "Site One Page",
-    price: "À partir de 790 € HT",
-    features: [
-      "Présentation de l'entreprise",
-      "Services",
-      "Réalisations",
-      "Avis clients",
-      "Contact",
-      "Responsive",
-      "SEO de base",
+    id: "multipage",
+    name: "Site professionnel multipage",
+    description:
+      "Une structure plus complète avec plusieurs pages dédiées à vos services, vos réalisations et votre entreprise, pour approfondir votre présentation.",
+    advantages: [
+      "Une page dédiée par service ou activité",
+      "Espace pour présenter vos réalisations",
+      "Meilleure structuration pour le référencement",
+      "Plus d'espace pour convaincre vos visiteurs",
     ],
-  },
-  {
-    id: "vitrine-essentiel",
-    name: "Site Vitrine Essentiel",
-    price: "À partir de 1 190 € HT",
-    features: [
-      "Jusqu'à 5 pages",
-      "Design professionnel",
-      "Formulaires",
-      "Responsive",
-      "SEO de base",
-      "Optimisation conversion",
-    ],
-  },
-  {
-    id: "vitrine-pro",
-    name: "Site Vitrine Pro",
-    price: "À partir de 1 690 € HT",
-    features: [
-      "8 à 10 pages",
-      "Plusieurs pages services",
-      "Réalisations et études de cas",
-      "Témoignages",
-      "Tracking",
-      "SEO technique de base",
-      "Optimisation conversion",
-    ],
-  },
-  {
-    id: "refonte",
-    name: "Refonte de site",
-    price: "À partir de 990 € HT",
-    description: "Modernisation du design, de la structure et du parcours utilisateur.",
   },
   {
     id: "ecommerce",
-    name: "E-commerce",
-    price: "Sur devis",
-    description: "Boutique en ligne adaptée à votre catalogue, vos produits et votre activité.",
+    name: "Site e-commerce",
+    description:
+      "Une boutique en ligne pour présenter et vendre vos produits, avec un parcours d'achat clair et sécurisé.",
+    advantages: [
+      "Catalogue produits organisé",
+      "Parcours d'achat simplifié",
+      "Gestion adaptée à votre catalogue",
+      "Base technique évolutive",
+    ],
   },
 ];
 
-export const websiteBenefits = [
-  "Améliorer l'image de l'entreprise",
-  "Gagner en crédibilité",
-  "Être mieux visible sur Google",
-  "Générer davantage de demandes",
-  "Améliorer la conversion",
-  "Proposer une meilleure expérience mobile",
+export type WebsiteStrength = {
+  title: string;
+  text: string;
+};
+
+export const websiteStrengths: WebsiteStrength[] = [
+  {
+    title: "Design personnalisé",
+    text: "Une identité visuelle propre à votre entreprise, pas un modèle générique.",
+  },
+  {
+    title: "Multi-support",
+    text: "Un affichage adapté aux ordinateurs, tablettes et mobiles.",
+  },
+  {
+    title: "Performance",
+    text: "Des pages pensées pour se charger rapidement.",
+  },
+  {
+    title: "Bonnes pratiques SEO",
+    text: "Une structure construite selon les bonnes pratiques du référencement naturel.",
+  },
+  {
+    title: "Expérience utilisateur",
+    text: "Une navigation claire, pensée pour guider le visiteur vers l'action.",
+  },
+  {
+    title: "Accompagnement personnalisé",
+    text: "Un suivi tout au long du projet, de l'analyse à la mise en ligne.",
+  },
 ];
 
-export const websiteIntegrations = ["Google Ads", "SEO", "CRM", "Automatisations", "IA téléphonique", "Relances commerciales"];
+export type WebsiteProcessStep = {
+  number: string;
+  title: string;
+  text: string;
+};
 
-export const websiteIntegrationText =
-  "Nous ne créons pas seulement un site. Nous pouvons construire tout le système permettant d'attirer, convertir et suivre vos futurs clients.";
+export const websiteProcess: WebsiteProcessStep[] = [
+  {
+    number: "01",
+    title: "Analyse des besoins",
+    text: "Comprendre votre activité, vos objectifs et les attentes de vos visiteurs.",
+  },
+  {
+    number: "02",
+    title: "Conception et design",
+    text: "Construire une maquette fidèle à votre image et à vos objectifs commerciaux.",
+  },
+  {
+    number: "03",
+    title: "Développement et optimisation",
+    text: "Développer le site et l'optimiser pour la performance et le référencement.",
+  },
+  {
+    number: "04",
+    title: "Mise en ligne et accompagnement",
+    text: "Mettre le site en ligne et vous accompagner dans son évolution.",
+  },
+];
+
+export type WebsiteFaqItem = {
+  question: string;
+  answer: string;
+};
+
+export const websiteFaqItems: WebsiteFaqItem[] = [
+  {
+    question: "Combien de temps faut-il pour créer un site internet ?",
+    answer:
+      "Le délai dépend de la taille du projet, des fonctionnalités souhaitées et de la disponibilité des contenus. Un calendrier précis est communiqué après l'analyse de vos besoins.",
+  },
+  {
+    question: "Quel est le tarif d'un site internet ?",
+    answer:
+      "Chaque projet est différent selon le nombre de pages, les fonctionnalités et le niveau de personnalisation souhaités. Nos tarifs sont donc établis sur devis, après un échange sur vos besoins.",
+  },
+  {
+    question: "Puis-je faire modifier mon site après sa mise en ligne ?",
+    answer:
+      "Oui. Selon vos besoins, nous pouvons vous former à la mise à jour de certains contenus ou prendre en charge les modifications pour vous.",
+  },
+  {
+    question: "Qui s'occupe de l'hébergement et de la maintenance de mon site ?",
+    answer:
+      "L'hébergement et la maintenance peuvent être pris en charge par nos soins ou laissés à votre convenance, selon ce qui est défini ensemble au moment du projet.",
+  },
+];

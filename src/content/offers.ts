@@ -75,7 +75,7 @@ export const acquisitionOffers: Offer[] = [
   },
   {
     id: "premium",
-    name: "Pack RDV Premium",
+    name: "Offre Premium",
     badge: "Accompagnement complet",
     tagline: "Acquisition + conversion + suivi commercial",
     summary: "Notre accompagnement le plus complet : attirer, suivre et mieux transformer vos prospects en clients.",
@@ -109,8 +109,8 @@ export const acquisitionOffers: Offer[] = [
       "Suivi des rendez-vous",
       "Suivi des devis et propositions commerciales",
     ],
-    cta: "Découvrir le Pack Premium",
-    href: "/contact?offre=Pack%20RDV%20Premium",
+    cta: "Découvrir l'Offre Premium",
+    href: "/contact?offre=Offre%20Premium",
   },
 ];
 
@@ -320,8 +320,8 @@ export const offerGuides: OfferGuide[] = [
   },
   {
     question: "Je veux un système complet avec acquisition, suivi commercial et visibilité locale",
-    answer: "Choisissez le Pack RDV Premium.",
-    offerName: "Pack RDV Premium",
+    answer: "Choisissez l'Offre Premium.",
+    offerName: "Offre Premium",
   },
 ];
 
@@ -342,7 +342,7 @@ export const offersFaqItems: OfferFaqItem[] = [
       "Les deux offres reposent sur les mêmes fondamentaux : Google Ads, landing page, suivi des appels et formulaires, CRM, reporting et relances. L'Offre Standard approfondit ces éléments avec une structure plus complète et un suivi plus régulier.",
   },
   {
-    question: "Que contient le Pack RDV Premium en plus ?",
+    question: "Que contient l'Offre Premium en plus ?",
     answer:
       "Il ajoute notamment la gestion des rendez-vous et des devis, la visibilité locale, Google Business Profile, les avis clients, le SEO local progressif et le retargeting lorsque pertinent.",
   },
@@ -361,7 +361,7 @@ export const offersFaqItems: OfferFaqItem[] = [
   {
     question: "Quelle offre choisir pour travailler également ma visibilité locale ?",
     answer:
-      "Le Pack RDV Premium est le plus adapté, car il intègre l'acquisition, le suivi des rendez-vous et des devis, Google Business Profile, les avis et le SEO local progressif.",
+      "L'Offre Premium est la plus adaptée, car elle intègre l'acquisition, le suivi des rendez-vous et des devis, Google Business Profile, les avis et le SEO local progressif.",
   },
 ];
 

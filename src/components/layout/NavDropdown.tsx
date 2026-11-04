@@ -9,7 +9,7 @@ import type { NavLink } from "@/content/site";
 const itemMeta: Record<string, { icon: LucideIcon; description: string }> = {
   "/sites-internet": {
     icon: Globe,
-    description: "Landing pages, sites vitrines et refontes",
+    description: "Sites vitrines, multipages et e-commerce sur mesure",
   },
   "/offres": {
     icon: LayoutGrid,
